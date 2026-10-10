@@ -26,7 +26,7 @@ export function createUnsignedOrder(
     expiration: order.expiration,
     maker: identity.maker,
     makerAmount: order.offeredAmount.toString(),
-    metadata: BYTES32_ZERO,
+    metadata: order.metadata ?? BYTES32_ZERO,
     orderType: order.orderType,
     protocolVersion: isV2PositionId(order.assetId)
       ? ExchangeOrderProtocolVersion.V3

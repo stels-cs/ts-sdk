@@ -1,6 +1,7 @@
 import type {
   BuilderCode,
   ClobAssetId,
+  OrderMetadata,
   OrderSide,
   OrderType,
   PositionId,
@@ -41,6 +42,8 @@ export type PrepareMarketBuyOrderRequest =
       builderCode?: string;
       /** @defaultValue OrderType.FAK */
       orderType?: OrderType.FAK | OrderType.FOK;
+      /** Optional bytes32 order metadata */
+      metadata?: string;
     }
   | {
       assetId?: never;
@@ -64,6 +67,8 @@ export type PrepareMarketBuyOrderRequest =
       builderCode?: string;
       /** @defaultValue OrderType.FAK */
       orderType?: OrderType.FAK | OrderType.FOK;
+      /** Optional bytes32 order metadata */
+      metadata?: string;
     };
 
 export type PrepareMarketSellOrderRequest =
@@ -81,6 +86,8 @@ export type PrepareMarketSellOrderRequest =
       builderCode?: string;
       /** @defaultValue OrderType.FAK */
       orderType?: OrderType.FAK | OrderType.FOK;
+      /** Optional bytes32 order metadata */
+      metadata?: string;
     }
   | {
       assetId?: never;
@@ -96,6 +103,8 @@ export type PrepareMarketSellOrderRequest =
       builderCode?: string;
       /** @defaultValue OrderType.FAK */
       orderType?: OrderType.FAK | OrderType.FOK;
+      /** Optional bytes32 order metadata */
+      metadata?: string;
     };
 
 export type PrepareMarketOrderRequest =
@@ -125,6 +134,8 @@ export type PrepareLimitOrderRequest =
        * it must be at least 3 minutes in the future and creates a GTD order.
        */
       expiration?: number;
+      /** Optional bytes32 order metadata */
+      metadata?: string;
     }
   | {
       assetId?: never;
@@ -148,6 +159,8 @@ export type PrepareLimitOrderRequest =
        * it must be at least 3 minutes in the future and creates a GTD order.
        */
       expiration?: number;
+      /** Optional bytes32 order metadata */
+      metadata?: string;
     };
 
 type BaseOrderDraft = {
@@ -161,6 +174,7 @@ type BaseOrderDraft = {
   side: OrderSide;
   signer: EvmAddress;
   requestedAmount: bigint;
+  metadata?: OrderMetadata;
 };
 
 /** @internal */

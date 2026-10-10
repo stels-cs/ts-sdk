@@ -2,6 +2,8 @@ import {
   type BuilderCode,
   BuilderCodeSchema,
   type ClobAssetId,
+  type OrderMetadata,
+  OrderMetadataSchema,
   OrderSide,
   OrderType,
   PositiveDecimalNumberSchema,
@@ -30,6 +32,7 @@ import type { OrderDraft, PrepareMarketOrderRequest } from './types';
 
 const BasePrepareMarketOrderParamsSchema = z.object({
   builderCode: BuilderCodeSchema.optional(),
+  metadata: OrderMetadataSchema.optional(),
   orderType: z
     .union([z.literal(OrderType.FAK), z.literal(OrderType.FOK)])
     .default(OrderType.FAK),
@@ -59,6 +62,7 @@ export type PrepareMarketOrderDraftParams =
       maxSpend?: number;
       orderType: OrderType.FAK | OrderType.FOK;
       side: OrderSide.BUY;
+      metadata?: OrderMetadata;
     }
   | {
       assetId: ClobAssetId;
@@ -67,6 +71,7 @@ export type PrepareMarketOrderDraftParams =
       orderType: OrderType.FAK | OrderType.FOK;
       shares: number;
       side: OrderSide.SELL;
+      metadata?: OrderMetadata;
     };
 
 export const PrepareMarketOrderParamsSchema = z
@@ -113,6 +118,7 @@ export async function prepareMarketOrderDraft(
     side: params.side,
     signer: context.signerAddress,
     requestedAmount: amounts.requestedAmount,
+    metadata: params.metadata,
   };
 }
 
