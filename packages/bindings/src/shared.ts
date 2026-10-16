@@ -78,7 +78,6 @@ function toTaggedInteger<T extends number>(value: number): T {
 
 export type BestLineId = Tagged<string, 'BestLineId'>;
 export type BuilderCode = Tagged<HexString, 'BuilderCode'>;
-export type OrderMetadata = Tagged<HexString, 'OrderMetadata'>;
 export type Uuid = Tagged<string, 'Uuid'>;
 export type ApiKey = Tagged<string, 'ApiKey'>;
 export type CategoryId = Tagged<string, 'CategoryId'>;
@@ -136,14 +135,6 @@ export function toBuilderCode(value: string): BuilderCode {
   }
 
   return value as BuilderCode;
-}
-
-export function toOrderMetadata(value: string): OrderMetadata {
-  if (!isHexString(value) || value.length !== 66) {
-    throw new TypeError(`Expected a 32-byte hex string, received: ${value}`);
-  }
-
-  return value as OrderMetadata;
 }
 
 export function toUuid(value: string): Uuid {
@@ -343,7 +334,6 @@ export function toBaseUnits(value: string): BaseUnits {
 export const CategoryIdSchema = z.string().transform(toCategoryId);
 export const ApiKeySchema = z.string().transform(toApiKey);
 export const BuilderCodeSchema = z.string().transform(toBuilderCode);
-export const OrderMetadataSchema = z.string().transform(toOrderMetadata);
 export const ClobRewardIdSchema = z.string().transform(toClobRewardId);
 export const CommentIdSchema = z.string().transform(toCommentId);
 export const ComboActivityIdSchema = z.string().transform(toComboActivityId);
