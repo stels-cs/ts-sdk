@@ -46,7 +46,7 @@ export {
 } from '@polymarket-client-open/bindings/perps';
 export type * from '@polymarket-client-open/bindings/relayer';
 export * from './abis';
-export { SearchSort } from './actions';
+export { SearchSort, isWalletDeployed } from './actions';
 export type {
   RelayerApiKeyConfig,
   RemoteBuilderSigningConfig,
@@ -77,3 +77,6 @@ export {
   resolveAccountIdentity,
   SignerType,
 } from './wallet';
+export {
+  deployDepositWallet
+} from './actions/gasless'
