@@ -2,7 +2,7 @@ import {
   RfqExecutionStatus,
   RfqKnownErrorCode,
   RfqQuoteRejectedError,
-} from '@polymarket/client';
+} from '@polymarket-client-open/client';
 import { describe, expect, it, runMeteredTests } from './fixtures';
 
 const MAX_IN_FLIGHT_QUOTES = 8;

@@ -1,4 +1,4 @@
-import type { EvmAddress } from '@polymarket/types';
+import type { EvmAddress } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import {
   ClobAssetIdSchema,

@@ -1,5 +1,5 @@
-import type { ApiKeyCreds } from '@polymarket/bindings/clob';
-import type { PriceEvent } from '@polymarket/bindings/subscriptions';
+import type { ApiKeyCreds } from '@polymarket-client-open/bindings/clob';
+import type { PriceEvent } from '@polymarket-client-open/bindings/subscriptions';
 import type {
   EventForSubscriptionSpec,
   PriceSubscription,

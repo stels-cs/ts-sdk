@@ -1,8 +1,8 @@
 import {
   type PaginationCursor,
   toPaginationCursor,
-} from '@polymarket/bindings';
-import { type ResultAsync, unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings';
+import { type ResultAsync, unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import { PaginationLimitError, UserInputError } from './errors';
 

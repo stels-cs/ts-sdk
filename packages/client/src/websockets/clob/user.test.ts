@@ -1,4 +1,4 @@
-import { ApiKeyCredsSchema } from '@polymarket/bindings/clob';
+import { ApiKeyCredsSchema } from '@polymarket-client-open/bindings/clob';
 import { ws } from 'msw';
 import { setupServer } from 'msw/node';
 import {

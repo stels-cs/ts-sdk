@@ -1,5 +1,5 @@
-import { toPaginationCursor } from '@polymarket/bindings';
-import { okAsync } from '@polymarket/types';
+import { toPaginationCursor } from '@polymarket-client-open/bindings';
+import { okAsync } from '@polymarket-client-open/types';
 import { describe, expect, it } from 'vitest';
 import { PaginationLimitError, UserInputError } from './errors';
 import {

@@ -1,6 +1,6 @@
-# `@polymarket/bindings`
+# `@polymarket-client-open/bindings`
 
-The `@polymarket/bindings` contains generated bindings for the Polymarket API.
+The `@polymarket-client-open/bindings` contains generated bindings for the Polymarket API.
 
 ---
 
@@ -9,13 +9,13 @@ The `@polymarket/bindings` contains generated bindings for the Polymarket API.
 ## Installation
 
 ```bash
-pnpm add @polymarket/bindings
+pnpm add @polymarket-client-open/bindings
 ```
 
 ## Usage
 
 ```ts
-import {} from '@polymarket/bindings';
+import {} from '@polymarket-client-open/bindings';
 ```
 
 ## Development
@@ -23,7 +23,7 @@ import {} from '@polymarket/bindings';
 From the monorepo root:
 
 ```bash
-pnpm --filter @polymarket/bindings build
+pnpm --filter @polymarket-client-open/bindings build
 ```
 
 ## License

@@ -1,6 +1,6 @@
-import { EvmAddressSchema } from '@polymarket/bindings';
-import { PerpsRegistrationResponseSchema } from '@polymarket/bindings/perps';
-import { unwrap } from '@polymarket/types';
+import { EvmAddressSchema } from '@polymarket-client-open/bindings';
+import { PerpsRegistrationResponseSchema } from '@polymarket-client-open/bindings/perps';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient } from '../../clients';
 import {

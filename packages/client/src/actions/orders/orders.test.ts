@@ -4,10 +4,13 @@ import {
   OrderType,
   toPositionId,
   toTokenId,
-} from '@polymarket/bindings';
-import { AssetTypeSchema, SignatureType } from '@polymarket/bindings/clob';
-import { WalletType } from '@polymarket/bindings/gamma';
-import type { EvmAddress } from '@polymarket/types';
+} from '@polymarket-client-open/bindings';
+import {
+  AssetTypeSchema,
+  SignatureType,
+} from '@polymarket-client-open/bindings/clob';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
+import type { EvmAddress } from '@polymarket-client-open/types';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { ExchangeOrderProtocolVersion } from '../../exchange';
 import { AssetType } from '../../index';

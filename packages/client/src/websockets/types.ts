@@ -7,7 +7,7 @@ import type {
   PriceEvent,
   SportsEvent,
   UserEvent,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 import type {
   CommentsSubscription,
   CryptoPricesChainlinkTwapSubscription,

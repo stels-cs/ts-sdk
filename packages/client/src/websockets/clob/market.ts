@@ -1,7 +1,7 @@
 import {
   type MarketEvent,
   MarketEventSchema,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 import type {
   MarketSubscription,
   SubscriptionHandle,

@@ -1,4 +1,4 @@
-import { never, type TxHash } from '@polymarket/types';
+import { never, type TxHash } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import {
   type DecimalString,

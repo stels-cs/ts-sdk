@@ -1,4 +1,4 @@
-import type { Market, PublicClient } from '@polymarket/client';
+import type { Market, PublicClient } from '@polymarket-client-open/client';
 
 type MarketLookupClient = Pick<PublicClient, 'fetchOrderBook' | 'listMarkets'>;
 

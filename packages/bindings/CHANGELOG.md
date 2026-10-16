@@ -1,4 +1,4 @@
-# @polymarket/bindings
+# @polymarket-client-open/bindings
 
 ## 0.13.0
 
@@ -67,7 +67,7 @@
 - 54337ed: Support `CONDITIONAL-V2` balance and allowance reads and refreshes. Use the Protocol
   V2 position selector for both allowance checks and post-approval refreshes when
   automatically recovering a Protocol V2 sell order. Export `AssetType` from
-  `@polymarket/client` for explicit balance and allowance calls.
+  `@polymarket-client-open/client` for explicit balance and allowance calls.
 
 ## 0.11.0
 
@@ -157,13 +157,13 @@
 - aae2882: RequestRejectedError now exposes a typed restriction distinguishing matching-engine restarts (HTTP 425) from post-only mode (HTTP 503), its retryAfter value falls back to the retry_after_seconds response field when the Retry-After header is absent, and batch post-only rejections map to the post_only_mode order error code instead of unknown. The SDK still does not retry automatically.
 - ccd6ef4: Remove unused CTF-specific runtime condition ID aliases in favor of the protocol-neutral condition ID APIs. The deprecated `CtfConditionId` type alias remains available for source compatibility.
 - Updated dependencies [0db340d]
-  - @polymarket/types@0.2.0
+  - @polymarket-client-open/types@0.2.0
 
 ## 0.6.0
 
 ### Minor Changes
 
-- 050331b: Add requester-side combo RFQ support: `client.requestComboQuote(...)`, `client.acceptComboQuote(...)`, and `client.waitForComboFill(...)`, plus the `fetchRfqStatus` action in `@polymarket/client/actions`. Requests authenticate with the client's Builder API Key (`builderApiKey(...)` or `remoteBuilderSigning(...)`), and winning quotes are self-contained JSON values that may be persisted or routed between processes before acceptance. SELL quotes expose exact post-fee collateral proceeds as `netReceive`. Business outcomes such as no quotes, a maker declining, or an expired acceptance window are returned as result values; gateway rejections throw the new `RfqRequestRejectedError` with a classified `RfqRejectionCode`.
+- 050331b: Add requester-side combo RFQ support: `client.requestComboQuote(...)`, `client.acceptComboQuote(...)`, and `client.waitForComboFill(...)`, plus the `fetchRfqStatus` action in `@polymarket-client-open/client/actions`. Requests authenticate with the client's Builder API Key (`builderApiKey(...)` or `remoteBuilderSigning(...)`), and winning quotes are self-contained JSON values that may be persisted or routed between processes before acceptance. SELL quotes expose exact post-fee collateral proceeds as `netReceive`. Business outcomes such as no quotes, a maker declining, or an expired acceptance window are returned as result values; gateway rejections throw the new `RfqRequestRejectedError` with a classified `RfqRejectionCode`.
 - dd427eb: Expose PolyV2 position IDs alongside CTF token IDs on normalized market outcomes, preserve the deprecated market-level position ID array for compatibility, and introduce protocol-neutral condition ID APIs while retaining `CtfConditionId`, `CtfConditionIdSchema`, `OptionalCtfConditionIdSchema`, and `toCtfConditionId` as deprecated compatibility aliases.
 
 ### Patch Changes
@@ -269,7 +269,7 @@
 - 8790a22: Normalize empty-string optional decimal fields on streamed market and trade events to null (for example a trade's `feeRateBps` and a price change's `bestBid`/`bestAsk`), so consumers never receive `''` where a decimal string or null is expected.
 - ea844f3: Strengthen CLOB batch price read result types so midpoint, price, and spread lookups are keyed by `TokenId`. `fetchPrices` now returns partial `OrderSide` records containing decimal strings, while `fetchMidpoints` and `fetchSpreads` return token ID keyed decimal strings.
 - 7633fad: Remove `RfqKnownInboundMessageSchema`. The loose `{ type }` base was extended and its `type` field overwritten by every concrete inbound message schema, so it added nothing; each message schema now declares its own object shape directly.
-- e60eefc: Type CLOB cancellation results with a branded `OrderId`. `CancelOrdersResponse` now exposes `canceled` as `OrderId[]` and keys `notCanceled` by `OrderId` across `cancelOrder`, `cancelOrders`, `cancelMarketOrders`, and `cancelAll`. Runtime values and wire shapes are unchanged; the new `OrderId` type, `toOrderId`, and `OrderIdSchema` are exported from `@polymarket/bindings`.
+- e60eefc: Type CLOB cancellation results with a branded `OrderId`. `CancelOrdersResponse` now exposes `canceled` as `OrderId[]` and keys `notCanceled` by `OrderId` across `cancelOrder`, `cancelOrders`, `cancelMarketOrders`, and `cancelAll`. Runtime values and wire shapes are unchanged; the new `OrderId` type, `toOrderId`, and `OrderIdSchema` are exported from `@polymarket-client-open/bindings`.
 - 0f25328: Remove the unreleased `QUOTE_VALIDATION_TIMEOUT_INTERNAL` member from `RfqKnownErrorCode`. The gateway now reports quote-validation timeouts as `SERVICE_UNAVAILABLE`; gateways still emitting the internal code during rollout flow through the open `RfqErrorCode` type as plain strings.
 - c6e0285: Parse RFQ quote rejections that use the `SUBMISSION_WINDOW_CLOSED` gateway error code.
 - 6e0f923: Add repository metadata required for npm trusted publishing provenance validation.
@@ -307,7 +307,7 @@
 - Updated dependencies [0dc6339]
 - Updated dependencies [3a8d59a]
 - Updated dependencies [d144ca9]
-  - @polymarket/types@0.1.0
+  - @polymarket-client-open/types@0.1.0
 
 ## 0.1.0-beta.16
 
@@ -381,7 +381,7 @@
 - e2ce4f9: Tighten Perps order request input types and validation for time-in-force-specific price and post-only constraints.
 - 7f7eefe: Rename duplicate Perps raw model and response schemas to the public schema names.
 - Updated dependencies [700acc9]
-  - @polymarket/types@0.1.0-beta.4
+  - @polymarket-client-open/types@0.1.0-beta.4
 
 ## 0.1.0-beta.7
 
@@ -436,7 +436,7 @@
 - d045298: Allow activity market icons to be null when the Data API returns sparse historical rows without an icon URL.
 - Updated dependencies [6e0f923]
 - Updated dependencies [0dc6339]
-  - @polymarket/types@0.1.0-beta.3
+  - @polymarket-client-open/types@0.1.0-beta.3
 
 ## 0.1.0-beta.2
 
@@ -444,7 +444,7 @@
 
 - 3a8d59a: chore: configure packages for public beta release.
 - Updated dependencies [3a8d59a]
-  - @polymarket/types@0.1.0-beta.2
+  - @polymarket-client-open/types@0.1.0-beta.2
 
 ## 0.1.0-beta.1
 
@@ -452,7 +452,7 @@
 
 - d144ca9: chore: empty changeset to test new release workflow
 - Updated dependencies [d144ca9]
-  - @polymarket/types@0.1.0-beta.1
+  - @polymarket-client-open/types@0.1.0-beta.1
 
 ## 0.1.0-beta.0
 
@@ -463,4 +463,4 @@
 ### Patch Changes
 
 - Updated dependencies [15597df]
-  - @polymarket/types@0.1.0-beta.0
+  - @polymarket-client-open/types@0.1.0-beta.0

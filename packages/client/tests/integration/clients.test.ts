@@ -2,9 +2,12 @@ import {
   createSecureClient,
   UserInputError,
   WalletType,
-} from '@polymarket/client';
-import { fetchApiKeys, isWalletDeployed } from '@polymarket/client/actions';
-import { InvariantError, ZERO_ADDRESS } from '@polymarket/types';
+} from '@polymarket-client-open/client';
+import {
+  fetchApiKeys,
+  isWalletDeployed,
+} from '@polymarket-client-open/client/actions';
+import { InvariantError, ZERO_ADDRESS } from '@polymarket-client-open/types';
 import { describe, expect, it, runMeteredTests } from './fixtures';
 
 describe('clients', () => {

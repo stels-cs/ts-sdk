@@ -1,4 +1,7 @@
-import type { Erc1271Signature, EvmSignature } from '@polymarket/types';
+import type {
+  Erc1271Signature,
+  EvmSignature,
+} from '@polymarket-client-open/types';
 import {
   createExchangeOrderSignature,
   createExchangeOrderTypedDataPayload,

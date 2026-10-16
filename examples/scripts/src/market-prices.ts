@@ -1,4 +1,4 @@
-import { createPublicClient, OrderSide } from '@polymarket/client';
+import { createPublicClient, OrderSide } from '@polymarket-client-open/client';
 import { never } from './lib/assert';
 
 const client = createPublicClient();

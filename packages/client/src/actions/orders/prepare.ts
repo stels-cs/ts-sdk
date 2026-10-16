@@ -1,4 +1,4 @@
-import { expectEvmSignature } from '@polymarket/types';
+import { expectEvmSignature } from '@polymarket-client-open/types';
 import type { BaseSecureClient } from '../../clients';
 import {
   InsufficientLiquidityError,

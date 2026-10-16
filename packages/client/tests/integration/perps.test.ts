@@ -5,15 +5,15 @@ import type {
   PerpsSession,
   TxHash,
   UpdatePerpsLeverageRequest,
-} from '@polymarket/client';
+} from '@polymarket-client-open/client';
 import {
   OrderSide,
   PerpsTimeInForce,
   RequestRejectedError,
   TransferPerpsCollateralError,
   UserInputError,
-} from '@polymarket/client';
-import { expectNonEmptyArray } from '@polymarket/types';
+} from '@polymarket-client-open/client';
+import { expectNonEmptyArray } from '@polymarket-client-open/types';
 import { vi } from 'vitest';
 import {
   describe,

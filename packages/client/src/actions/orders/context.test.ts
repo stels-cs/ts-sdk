@@ -1,4 +1,4 @@
-import type { TickSizeValue } from '@polymarket/bindings';
+import type { TickSizeValue } from '@polymarket-client-open/bindings';
 import { describe, expect, it } from 'vitest';
 import { UserInputError } from '../../errors';
 import { resolveRoundingConfig, validatePriceOnTickGrid } from './context';

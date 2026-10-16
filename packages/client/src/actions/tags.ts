@@ -1,4 +1,4 @@
-import { PaginationCursorSchema } from '@polymarket/bindings';
+import { PaginationCursorSchema } from '@polymarket-client-open/bindings';
 import {
   ListRelatedTagResourcesResponseSchema,
   ListRelatedTagsResponseSchema,
@@ -6,8 +6,8 @@ import {
   type RelatedTag,
   type Tag,
   TagSchema,
-} from '@polymarket/bindings/gamma';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/gamma';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {

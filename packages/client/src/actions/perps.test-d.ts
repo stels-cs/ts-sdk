@@ -1,7 +1,7 @@
 import {
   type PerpsCredentials,
   PerpsInstrumentCategory,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 import { describe, expectTypeOf, it } from 'vitest';
 import type {
   ApprovePerpsBuilderFeeRequest,

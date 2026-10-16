@@ -1,17 +1,17 @@
-import { OrderSide } from '@polymarket/bindings';
+import { OrderSide } from '@polymarket-client-open/bindings';
 import {
   ComboAcceptFailureReason,
   ComboQuoteUnavailableReason,
   RfqRejectionCode,
   RfqStatus,
-} from '@polymarket/bindings/combos';
-import { WalletType } from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings/combos';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   errAsync,
   expectEvmAddress,
   okAsync,
   type ResultAsync,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { describe, expect, it, vi } from 'vitest';
 import type { BaseSecureClient } from '../clients';
 import { production } from '../environments';

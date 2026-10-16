@@ -6,7 +6,7 @@ import {
   isPrivateKey,
   type PrivateKey,
   type TxHash,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import {
   type Account,
   type Chain,

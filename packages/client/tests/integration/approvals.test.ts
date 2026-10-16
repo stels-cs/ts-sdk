@@ -2,8 +2,8 @@ import {
   createSecureClient,
   SigningError,
   WalletType,
-} from '@polymarket/client';
-import { ZERO_ADDRESS } from '@polymarket/types';
+} from '@polymarket-client-open/client';
+import { ZERO_ADDRESS } from '@polymarket-client-open/types';
 import { vi } from 'vitest';
 import { describe, expect, it, runMeteredTests } from './fixtures';
 

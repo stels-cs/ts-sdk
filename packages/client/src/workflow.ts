@@ -1,4 +1,8 @@
-import type { EvmAddress, EvmSignature, HexString } from '@polymarket/types';
+import type {
+  EvmAddress,
+  EvmSignature,
+  HexString,
+} from '@polymarket-client-open/types';
 import { CancelledSigningError, makeErrorGuard, SigningError } from './errors';
 import type {
   Signer,

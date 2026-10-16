@@ -1,9 +1,13 @@
-import { TradeStatus, type TxHash, TxHashSchema } from '@polymarket/bindings';
+import {
+  TradeStatus,
+  type TxHash,
+  TxHashSchema,
+} from '@polymarket-client-open/bindings';
 import type {
   AcceptedOrderResponse,
   ClobTrade,
-} from '@polymarket/bindings/clob';
-import { delay } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/clob';
+import { delay } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseSecureClient } from '../../clients';
 import {

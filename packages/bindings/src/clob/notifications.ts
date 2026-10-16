@@ -1,4 +1,4 @@
-import type { TxHash } from '@polymarket/types';
+import type { TxHash } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import { CommentProfileSchema } from '../gamma/comment';
 import {

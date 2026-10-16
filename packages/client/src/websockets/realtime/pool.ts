@@ -1,7 +1,7 @@
 import type {
   PriceEvent,
   PriceProvider,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 import { pushable } from 'it-pushable';
 import type {
   PriceSubscription,

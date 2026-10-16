@@ -1,4 +1,4 @@
-import { ResultAsync } from '@polymarket/types';
+import { ResultAsync } from '@polymarket-client-open/types';
 import ky, { type KyInstance } from 'ky';
 import { RateLimitError, RequestRejectedError, TransportError } from './errors';
 import {

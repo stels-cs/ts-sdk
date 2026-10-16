@@ -1,10 +1,10 @@
-import { PaginationCursorSchema } from '@polymarket/bindings';
+import { PaginationCursorSchema } from '@polymarket-client-open/bindings';
 import {
   ListSeriesResponseSchema,
   type Series,
   SeriesSchema,
-} from '@polymarket/bindings/gamma';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/gamma';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {

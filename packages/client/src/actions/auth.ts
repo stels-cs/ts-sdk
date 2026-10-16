@@ -1,4 +1,4 @@
-import type { ApiKey } from '@polymarket/bindings';
+import type { ApiKey } from '@polymarket-client-open/bindings';
 import {
   type ApiKeyCreds,
   ApiKeyCredsSchema,
@@ -7,8 +7,12 @@ import {
   type BuilderApiKeyCreds,
   BuilderApiKeyCredsSchema,
   BuilderApiKeysResponseSchema,
-} from '@polymarket/bindings/clob';
-import { type EvmAddress, type EvmSignature, unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/clob';
+import {
+  type EvmAddress,
+  type EvmSignature,
+  unwrap,
+} from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient, BaseSecureClient } from '../clients';
 import {

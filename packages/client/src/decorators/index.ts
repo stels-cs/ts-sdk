@@ -1,4 +1,4 @@
-import type { Prettify } from '@polymarket/types';
+import type { Prettify } from '@polymarket-client-open/types';
 import type {
   BaseClient,
   BasePublicClient,

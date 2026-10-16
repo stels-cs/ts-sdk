@@ -1,4 +1,4 @@
-import type { ApiKeyCreds } from '@polymarket/bindings/clob';
+import type { ApiKeyCreds } from '@polymarket-client-open/bindings/clob';
 import type {
   RfqAuthMessage,
   RfqConfirmationDecision,
@@ -8,7 +8,7 @@ import type {
   RfqQuoteId,
   RfqQuoteMessage,
   RfqQuoteRequest,
-} from '@polymarket/bindings/combos';
+} from '@polymarket-client-open/bindings/combos';
 import type { AccountIdentity } from '../../wallet';
 import { resolveOrderIdentity } from '../../wallet';
 import type { RfqQuote } from './quote';

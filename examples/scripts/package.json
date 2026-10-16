@@ -1,5 +1,5 @@
 {
-  "name": "@polymarket/examples",
+  "name": "@polymarket-client-open/examples",
   "description": "Runnable TypeScript examples using the Polymarket SDK",
   "private": true,
   "version": "0.0.0",
@@ -19,7 +19,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@polymarket/client": "workspace:*",
+    "@polymarket-client-open/client": "workspace:*",
     "viem": "^2.46.3"
   },
   "devDependencies": {

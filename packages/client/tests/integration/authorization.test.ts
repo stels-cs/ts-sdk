@@ -1,13 +1,13 @@
 // biome-ignore-all lint/style/noRestrictedImports: msw's Node test server lives at this entrypoint.
 
-import { RelayerTransactionType } from '@polymarket/bindings/relayer';
+import { RelayerTransactionType } from '@polymarket-client-open/bindings/relayer';
 import {
   buildHmacSignature,
   createPublicClient,
   remoteBuilderSigning,
   SigningError,
-} from '@polymarket/client';
-import { fetchExecuteParams } from '@polymarket/client/actions';
+} from '@polymarket-client-open/client';
+import { fetchExecuteParams } from '@polymarket-client-open/client/actions';
 import { HttpResponse, http } from 'msw';
 import { setupServer } from 'msw/node';
 import { afterAll, afterEach, beforeAll } from 'vitest';

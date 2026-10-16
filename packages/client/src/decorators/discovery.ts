@@ -1,4 +1,4 @@
-import type { ComboMarket } from '@polymarket/bindings/combos';
+import type { ComboMarket } from '@polymarket-client-open/bindings/combos';
 import type {
   Comment,
   Event,
@@ -12,7 +12,7 @@ import type {
   Tag,
   TagReference,
   Team,
-} from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings/gamma';
 import {
   type FetchCommentsByIdRequest,
   type FetchEventRequest,

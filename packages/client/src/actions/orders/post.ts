@@ -1,11 +1,11 @@
-import { OrderType } from '@polymarket/bindings';
+import { OrderType } from '@polymarket-client-open/bindings';
 import {
   type OrderResponse,
   OrderResponseSchema,
   type OrderResponses,
   OrderResponsesSchema,
-} from '@polymarket/bindings/clob';
-import { invariant, unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/clob';
+import { invariant, unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseSecureClient } from '../../clients';
 import {

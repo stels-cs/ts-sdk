@@ -1,4 +1,9 @@
-import { err, ok, type Result, ResultAsync } from '@polymarket/types';
+import {
+  err,
+  ok,
+  type Result,
+  ResultAsync,
+} from '@polymarket-client-open/types';
 import type { z } from 'zod';
 import { UnexpectedResponseError } from './errors';
 

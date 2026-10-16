@@ -1,4 +1,4 @@
-import { expectHexString, type HexString } from '@polymarket/types';
+import { expectHexString, type HexString } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type {
   ComboConditionId,

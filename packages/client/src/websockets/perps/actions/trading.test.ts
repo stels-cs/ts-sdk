@@ -2,14 +2,14 @@ import {
   OrderSide,
   toDecimalString,
   toEpochMilliseconds,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   PerpsCancelOrderResultSchema,
   PerpsInstrumentIdSchema,
   PerpsKnownCancelOrderErrorCode,
   type PerpsPortfolio,
   PerpsTimeInForce,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 import { TypedData } from 'ox';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import {

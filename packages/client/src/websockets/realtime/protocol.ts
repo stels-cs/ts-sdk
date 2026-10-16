@@ -1,4 +1,4 @@
-import type { PriceProvider } from '@polymarket/bindings/subscriptions';
+import type { PriceProvider } from '@polymarket-client-open/bindings/subscriptions';
 import type { PriceSubscription } from '../../actions/subscriptions';
 
 /** @internal A single canonical price subscription shared by listeners. */

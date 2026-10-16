@@ -1,4 +1,4 @@
-import type { ApiKeyCreds } from '@polymarket/bindings/clob';
+import type { ApiKeyCreds } from '@polymarket-client-open/bindings/clob';
 import {
   PolyboltAckOp,
   PolyboltAckSchema,
@@ -6,8 +6,8 @@ import {
   PolyboltEnvelopeSchema,
   type PolyboltSubscription,
   parsePolyboltEvent,
-} from '@polymarket/bindings/subscriptions';
-import { setNonBlockingTimeout } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/subscriptions';
+import { setNonBlockingTimeout } from '@polymarket-client-open/types';
 import {
   ConnectionLostError,
   RequestRejectedError,

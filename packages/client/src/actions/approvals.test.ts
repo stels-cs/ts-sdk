@@ -2,13 +2,13 @@ import {
   type ApprovalContract,
   ApprovalStandard,
   type ApprovalsSnapshot,
-} from '@polymarket/bindings/data';
-import { WalletType } from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings/data';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   expectEvmAddress,
   expectTxHash,
   type HexString,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { describe, expect, it, vi } from 'vitest';
 import {
   erc20ApprovalCall,

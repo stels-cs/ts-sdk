@@ -2,15 +2,15 @@ import {
   CommentParentEntityType,
   toEventId,
   toPaginationCursor,
-} from '@polymarket/bindings';
-import type { Comment } from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings';
+import type { Comment } from '@polymarket-client-open/bindings/gamma';
 import {
   createPublicClient,
   type Page,
   PaginationLimitError,
   UserInputError,
-} from '@polymarket/client';
-import { expectPresent } from '@polymarket/types';
+} from '@polymarket-client-open/client';
+import { expectPresent } from '@polymarket-client-open/types';
 import { afterEach, vi } from 'vitest';
 import { describe, environment, expect, it } from './fixtures';
 import { expectNonEmptyPage } from './helpers';

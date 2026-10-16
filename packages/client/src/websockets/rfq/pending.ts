@@ -1,4 +1,4 @@
-import { setNonBlockingTimeout } from '@polymarket/types';
+import { setNonBlockingTimeout } from '@polymarket-client-open/types';
 import { TimeoutError } from '../../errors';
 
 type PendingResponse<T> = {

@@ -4,22 +4,22 @@ import {
   type PaginationCursor,
   PaginationCursorSchema,
   QuestionIdSchema,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   CanonicalMarketConditionIdSchema,
   FetchEventLiveVolumeResponseSchema,
   FetchResolutionsResponseSchema,
   type LiveVolume,
   type Resolution,
-} from '@polymarket/bindings/data';
+} from '@polymarket-client-open/bindings/data';
 import {
   type Event,
   EventSchema,
   FetchEventTagsResponseSchema,
   ListEventsKeysetResponseSchema,
   type TagReference,
-} from '@polymarket/bindings/gamma';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/gamma';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {
@@ -55,7 +55,7 @@ export {
   ResolutionSettlementTimeBasis,
   ResolutionSource,
   ResolutionStatus,
-} from '@polymarket/bindings/data';
+} from '@polymarket-client-open/bindings/data';
 
 const ListEventsRequestSchema = z.object({
   ascending: z.boolean().optional(),

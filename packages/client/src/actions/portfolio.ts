@@ -3,7 +3,7 @@ import {
   EventIdSchema,
   EvmAddressSchema,
   PaginationCursorSchema,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   CanonicalMarketConditionIdSchema,
   type ComboPosition,
@@ -28,8 +28,8 @@ import {
   type UserPnlSeries,
   type UserStats,
   type UserVolume,
-} from '@polymarket/bindings/data';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/data';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {
@@ -60,7 +60,7 @@ export {
   PositionStatus,
   UserPnlFidelity,
   UserPnlInterval,
-} from '@polymarket/bindings/data';
+} from '@polymarket-client-open/bindings/data';
 
 const ListPositionsRequestSchema = z
   .object({

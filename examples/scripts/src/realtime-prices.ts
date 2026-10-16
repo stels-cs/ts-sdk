@@ -1,5 +1,5 @@
-import { createSecureClient, PriceProvider } from '@polymarket/client';
-import { privateKey } from '@polymarket/client/viem';
+import { createSecureClient, PriceProvider } from '@polymarket-client-open/client';
+import { privateKey } from '@polymarket-client-open/client/viem';
 import { requireEnv } from './lib/env';
 
 const signer = privateKey(requireEnv('POLYMARKET_PRIVATE_KEY'));

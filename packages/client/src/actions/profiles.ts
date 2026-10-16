@@ -1,8 +1,8 @@
 import {
   type PublicProfile,
   PublicProfileSchema,
-} from '@polymarket/bindings/gamma';
-import { err, ok, unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/gamma';
+import { err, ok, unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {

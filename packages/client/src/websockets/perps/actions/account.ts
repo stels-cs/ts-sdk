@@ -3,7 +3,7 @@ import {
   PaginationCursorSchema,
   TxHashSchema,
   toPaginationCursor,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   FetchPerpsAccountConfigResponseSchema,
   FetchPerpsAccountStatsResponseSchema,
@@ -48,8 +48,8 @@ import {
   type PerpsWithdrawal,
   type PerpsWithdrawalStatus,
   PerpsWithdrawalStatusSchema,
-} from '@polymarket/bindings/perps';
-import { invariant, unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/perps';
+import { invariant, unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import { snakeCase, toSearchParams } from '../../../actions/params';
 import { RequestRejectedError } from '../../../errors';

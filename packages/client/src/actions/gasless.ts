@@ -2,8 +2,8 @@ import {
   EvmAddressSchema,
   type TransactionId,
   TransactionIdSchema,
-} from '@polymarket/bindings';
-import { WalletType } from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   type GaslessTransaction,
   GaslessTransactionSchema,
@@ -17,7 +17,7 @@ import {
   type RelayerLegacyExecuteRequest,
   RelayerTransactionState,
   RelayerTransactionType,
-} from '@polymarket/bindings/relayer';
+} from '@polymarket-client-open/bindings/relayer';
 import {
   delay,
   type EvmAddress,
@@ -33,7 +33,7 @@ import {
   type TxHash,
   unwrap,
   ZERO_ADDRESS,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { Bytes, Hash, TypedData as OxTypedData } from 'ox';
 import { z } from 'zod';
 import { encodeProxyCall, encodeSafeMultisendCall } from '../abis';

@@ -9,7 +9,7 @@ import {
   type RfqQuoteId,
   type RfqQuoteRequest,
   type RfqTrade,
-} from '@polymarket/bindings/combos';
+} from '@polymarket-client-open/bindings/combos';
 import type {
   RfqCancelQuoteAck,
   RfqConfirmationAck,

@@ -1,4 +1,8 @@
-import type { Page, Paginated, PerpsBuilderEarning } from '@polymarket/client';
+import type {
+  Page,
+  Paginated,
+  PerpsBuilderEarning,
+} from '@polymarket-client-open/client';
 import { describe, expect, it, runMeteredTests } from './fixtures';
 
 const builderAddress = process.env.POLYMARKET_PERPS_BUILDER_ADDRESS;

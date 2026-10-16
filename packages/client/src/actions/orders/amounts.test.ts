@@ -1,4 +1,7 @@
-import { OrderSide, type TickSizeValue } from '@polymarket/bindings';
+import {
+  OrderSide,
+  type TickSizeValue,
+} from '@polymarket-client-open/bindings';
 import { describe, expect, it } from 'vitest';
 import { computeLimitOrderAmounts, computeMarketOrderAmounts } from './amounts';
 import { validatePriceOnTickGrid } from './context';

@@ -1,6 +1,6 @@
-import { OrderSide, type TokenId } from '@polymarket/bindings';
-import type { PublicClient } from '@polymarket/client';
-import { expectPresent } from '@polymarket/types';
+import { OrderSide, type TokenId } from '@polymarket-client-open/bindings';
+import type { PublicClient } from '@polymarket-client-open/client';
+import { expectPresent } from '@polymarket-client-open/types';
 import { describe, expect, it } from './fixtures';
 import { expectPageWindow } from './helpers';
 

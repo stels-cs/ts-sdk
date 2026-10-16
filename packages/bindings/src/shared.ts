@@ -3,7 +3,7 @@ import {
   type HexString,
   isHexString,
   type TxHash,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { z } from 'zod';
 
 type Tagged<T, Tag extends string> = T & { readonly __tag: Tag };

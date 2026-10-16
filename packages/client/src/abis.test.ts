@@ -2,8 +2,8 @@ import {
   type ComboConditionId,
   toComboConditionId,
   toConditionId,
-} from '@polymarket/bindings';
-import { expectEvmAddress } from '@polymarket/types';
+} from '@polymarket-client-open/bindings';
+import { expectEvmAddress } from '@polymarket-client-open/types';
 import { describe, expect, it } from 'vitest';
 import { routerMergeCall, routerRedeemCall, routerSplitCall } from './abis';
 

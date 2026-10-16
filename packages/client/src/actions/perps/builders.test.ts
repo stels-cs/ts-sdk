@@ -1,5 +1,11 @@
-import { toDecimalString, toEpochMilliseconds } from '@polymarket/bindings';
-import { expectEvmAddress, expectEvmSignature } from '@polymarket/types';
+import {
+  toDecimalString,
+  toEpochMilliseconds,
+} from '@polymarket-client-open/bindings';
+import {
+  expectEvmAddress,
+  expectEvmSignature,
+} from '@polymarket-client-open/types';
 import { describe, expect, it } from 'vitest';
 import { minPerpsBuilderFeeRate } from '../../websockets/perps/actions/builder-terms';
 import {

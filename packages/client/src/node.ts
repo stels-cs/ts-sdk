@@ -1,5 +1,5 @@
 import process from 'node:process';
-import { invariant } from '@polymarket/types';
+import { invariant } from '@polymarket-client-open/types';
 
 import { SigningError } from './errors';
 import { buildHmacSignature } from './hmac';
@@ -7,11 +7,11 @@ import type { ApiKeyAuthorization, ApiKeyAuthorizationRequest } from './types';
 
 invariant(
   process.release.name === 'node',
-  'The @polymarket/client/node entrypoint requires a Node.js runtime.',
+  'The @polymarket-client-open/client/node entrypoint requires a Node.js runtime.',
 );
 invariant(
   typeof window === 'undefined' && typeof document === 'undefined',
-  'The @polymarket/client/node entrypoint cannot be imported in a browser-like runtime.',
+  'The @polymarket-client-open/client/node entrypoint cannot be imported in a browser-like runtime.',
 );
 
 export type BuilderApiKeyCreds = {

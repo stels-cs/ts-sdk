@@ -1,4 +1,4 @@
-import type { DecimalString } from '@polymarket/bindings';
+import type { DecimalString } from '@polymarket-client-open/bindings';
 import type {
   LastTradePrice,
   LastTradePriceForAsset,
@@ -6,7 +6,7 @@ import type {
   OrderBook,
   Prices,
   Spreads,
-} from '@polymarket/bindings/clob';
+} from '@polymarket-client-open/bindings/clob';
 import type {
   LiveVolume,
   MetaHolder,
@@ -14,7 +14,7 @@ import type {
   PriceHistoryPoint,
   Resolution,
   Trade,
-} from '@polymarket/bindings/data';
+} from '@polymarket-client-open/bindings/data';
 import {
   type EstimateMarketPriceRequest,
   estimateMarketPrice,

@@ -1,7 +1,7 @@
 import {
   RelayerAuthorizeSessionSignerStatus,
   RelayerRevokeSessionSignerStatus,
-} from '@polymarket/bindings/relayer';
+} from '@polymarket-client-open/bindings/relayer';
 import { describe, expect, it } from 'vitest';
 import { TransactionFailedError } from '../errors';
 import { assertSessionSignerOperationAccepted } from './session-key-status';

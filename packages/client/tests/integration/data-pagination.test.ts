@@ -1,4 +1,4 @@
-import { OrderSide } from '@polymarket/bindings';
+import { OrderSide } from '@polymarket-client-open/bindings';
 import { describe, expect, it } from './fixtures';
 
 describe('Data pagination', () => {

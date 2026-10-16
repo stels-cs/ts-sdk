@@ -1,4 +1,8 @@
-import { errAsync, okAsync, type ResultAsync } from '@polymarket/types';
+import {
+  errAsync,
+  okAsync,
+  type ResultAsync,
+} from '@polymarket-client-open/types';
 import { describe, expect, it } from 'vitest';
 import { RateLimitError, RequestRejectedError } from './errors';
 import { withRateLimitRetry } from './retry';

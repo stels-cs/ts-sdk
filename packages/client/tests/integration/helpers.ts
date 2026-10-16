@@ -1,9 +1,12 @@
 import type {
   AcceptedOrderResponse,
   OrderResponse,
-} from '@polymarket/bindings/clob';
-import type { Page, Paginated } from '@polymarket/client';
-import { expectNonEmptyArray, type NonEmptyArray } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/clob';
+import type { Page, Paginated } from '@polymarket-client-open/client';
+import {
+  expectNonEmptyArray,
+  type NonEmptyArray,
+} from '@polymarket-client-open/types';
 import { expect } from 'vitest';
 
 export function expectAcceptedOrderResponse(

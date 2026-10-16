@@ -1,5 +1,5 @@
-import type { PerpsInternalTransferId } from '@polymarket/bindings/perps';
-import type { EvmAddress, EvmSignature } from '@polymarket/types';
+import type { PerpsInternalTransferId } from '@polymarket-client-open/bindings/perps';
+import type { EvmAddress, EvmSignature } from '@polymarket-client-open/types';
 
 /** @internal */
 export type PerpsCollateralTransferOperation = {

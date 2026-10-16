@@ -5,7 +5,7 @@ import {
   EvmAddressSchema,
   OrderSideSchema,
   PaginationCursorSchema,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   type Activity,
   ActivityTypeSchema,
@@ -16,7 +16,7 @@ import {
   SortDirectionSchema,
   type Trade,
   TradeFilterTypeSchema,
-} from '@polymarket/bindings/data';
+} from '@polymarket-client-open/bindings/data';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {
@@ -38,7 +38,7 @@ export {
   SortDirection,
   TipSide,
   TradeFilterType,
-} from '@polymarket/bindings/data';
+} from '@polymarket-client-open/bindings/data';
 
 const ListTradesRequestSchema = z
   .object({

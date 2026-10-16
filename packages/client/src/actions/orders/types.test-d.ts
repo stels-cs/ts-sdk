@@ -1,4 +1,4 @@
-import { OrderSide } from '@polymarket/bindings';
+import { OrderSide } from '@polymarket-client-open/bindings';
 import { describe, expectTypeOf, it } from 'vitest';
 import type {
   EstimateMarketPriceRequest,

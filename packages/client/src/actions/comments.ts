@@ -7,14 +7,14 @@ import {
   type PaginationCursor,
   PaginationCursorSchema,
   type SeriesId,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   type Comment,
   ListCommentsKeysetResponseSchema,
   ListCommentsResponseSchema,
   SeriesIdSchema,
-} from '@polymarket/bindings/gamma';
-import { type ResultAsync, unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/gamma';
+import { type ResultAsync, unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {

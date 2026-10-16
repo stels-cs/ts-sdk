@@ -1,4 +1,7 @@
-import { type BuilderCode, BuilderCodeSchema } from '@polymarket/bindings';
+import {
+  type BuilderCode,
+  BuilderCodeSchema,
+} from '@polymarket-client-open/bindings';
 import {
   type ApiKeyAuthorization,
   createPublicClient,
@@ -11,12 +14,15 @@ import {
   relayerApiKey,
   type SecureClient,
   type Signer,
-} from '@polymarket/client';
-import type { BuilderApiKeyCreds } from '@polymarket/client/node';
-import { builderApiKey } from '@polymarket/client/node';
-import { signerFrom } from '@polymarket/client/viem';
-import type { EvmAddress, PrivateKey } from '@polymarket/types';
-import { expectEvmAddress, expectPrivateKey } from '@polymarket/types';
+} from '@polymarket-client-open/client';
+import type { BuilderApiKeyCreds } from '@polymarket-client-open/client/node';
+import { builderApiKey } from '@polymarket-client-open/client/node';
+import { signerFrom } from '@polymarket-client-open/client/viem';
+import type { EvmAddress, PrivateKey } from '@polymarket-client-open/types';
+import {
+  expectEvmAddress,
+  expectPrivateKey,
+} from '@polymarket-client-open/types';
 import { createWalletClient, http } from 'viem';
 import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
 import { polygon } from 'viem/chains';

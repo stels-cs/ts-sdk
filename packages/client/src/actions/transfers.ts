@@ -1,6 +1,9 @@
-import { type EvmAddress, EvmAddressSchema } from '@polymarket/bindings';
-import { WalletType } from '@polymarket/bindings/gamma';
-import type { EvmSignature } from '@polymarket/types';
+import {
+  type EvmAddress,
+  EvmAddressSchema,
+} from '@polymarket-client-open/bindings';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
+import type { EvmSignature } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import { erc20TransferCall } from '../abis';
 import type { BaseSecureClient } from '../clients';

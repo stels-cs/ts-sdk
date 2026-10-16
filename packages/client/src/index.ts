@@ -1,28 +1,28 @@
-export type * from '@polymarket/bindings';
+export type * from '@polymarket-client-open/bindings';
 export {
   CommentParentEntityType,
   OrderSide,
   OrderType,
-} from '@polymarket/bindings';
-export type * from '@polymarket/bindings/clob';
+} from '@polymarket-client-open/bindings';
+export type * from '@polymarket-client-open/bindings/clob';
 export {
   AssetType,
   NotificationType,
   OrderPostStatus,
   OrderResponseErrorCode,
   SignatureType,
-} from '@polymarket/bindings/clob';
-export type * from '@polymarket/bindings/data';
-export { ActivityType } from '@polymarket/bindings/data';
-export type * from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings/clob';
+export type * from '@polymarket-client-open/bindings/data';
+export { ActivityType } from '@polymarket-client-open/bindings/data';
+export type * from '@polymarket-client-open/bindings/gamma';
 export {
   ComboKnownStatus,
   ProtocolVersion,
   TeamOrdering,
   WalletType,
-} from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings/gamma';
 /** @experimental This API may change in a breaking way in any release, including patch releases. */
-export type * from '@polymarket/bindings/perps';
+export type * from '@polymarket-client-open/bindings/perps';
 /** @experimental This API may change in a breaking way in any release, including patch releases. */
 export {
   PerpsDepositStatus,
@@ -43,8 +43,8 @@ export {
   PerpsSide,
   PerpsSortDirection,
   PerpsTimeInForce,
-} from '@polymarket/bindings/perps';
-export type * from '@polymarket/bindings/relayer';
+} from '@polymarket-client-open/bindings/perps';
+export type * from '@polymarket-client-open/bindings/relayer';
 export * from './abis';
 export { SearchSort } from './actions';
 export type {

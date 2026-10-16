@@ -1,4 +1,4 @@
-import { setNonBlockingInterval } from '@polymarket/types';
+import { setNonBlockingInterval } from '@polymarket-client-open/types';
 import type { WebSocketHeartbeat } from './lifecycle';
 
 const CLOB_HEARTBEAT_INTERVAL_MS = 10_000;

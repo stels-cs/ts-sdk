@@ -1,8 +1,8 @@
-import { ApiKeyCredsSchema } from '@polymarket/bindings/clob';
+import { ApiKeyCredsSchema } from '@polymarket-client-open/bindings/clob';
 import {
   KnownPriceSource,
   PriceProvider,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { PriceSubscription } from '../../actions/subscriptions';
 import { TransportError } from '../../errors';

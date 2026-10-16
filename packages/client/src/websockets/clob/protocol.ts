@@ -1,8 +1,8 @@
-import type { ApiKeyCreds } from '@polymarket/bindings/clob';
+import type { ApiKeyCreds } from '@polymarket-client-open/bindings/clob';
 import type {
   MarketEvent,
   UserEvent,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 import type {
   MarketSubscription,
   UserSubscription,

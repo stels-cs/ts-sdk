@@ -1,4 +1,4 @@
-import { PriceProvider } from '@polymarket/bindings/subscriptions';
+import { PriceProvider } from '@polymarket-client-open/bindings/subscriptions';
 import { z } from 'zod';
 import { parseUserInput } from '../input';
 import type {

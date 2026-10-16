@@ -5,7 +5,7 @@ import {
   toConditionId,
   toPositionId,
   toTokenId,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import { describe, expect, it } from 'vitest';
 import {
   type CanonicalComboLegs,

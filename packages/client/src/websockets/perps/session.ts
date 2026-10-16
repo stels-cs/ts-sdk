@@ -1,5 +1,5 @@
-import { EvmAddressSchema } from '@polymarket/bindings';
-import type { PerpsPositionSnapshots } from '@polymarket/bindings/perps';
+import { EvmAddressSchema } from '@polymarket-client-open/bindings';
+import type { PerpsPositionSnapshots } from '@polymarket-client-open/bindings/perps';
 import {
   type PerpsAccountConfig,
   type PerpsAccountFill,
@@ -30,13 +30,17 @@ import {
   type PerpsUpdateLeverageBatchResult,
   type PerpsUpdateLeverageResult,
   type PerpsWithdrawal,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 import {
   PerpsNotificationsResyncFrameSchema,
   type PerpsSessionEvent,
   PerpsSessionUpdateEventSchema,
-} from '@polymarket/bindings/subscriptions';
-import { invariant, setNonBlockingTimeout, unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/subscriptions';
+import {
+  invariant,
+  setNonBlockingTimeout,
+  unwrap,
+} from '@polymarket-client-open/types';
 import { type Pushable, pushable } from 'it-pushable';
 import { z } from 'zod';
 import {
@@ -229,12 +233,12 @@ export type {
   PerpsUpdateLeverageBatchResult,
   PerpsUpdateLeverageRejection,
   PerpsUpdateLeverageResult,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 /** @experimental This API may change in a breaking way in any release, including patch releases. */
 export type {
   PerpsBuilderFillUpdateEvent,
   PerpsSessionEvent,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 export type {
   FetchPerpsAccountConfigRequest,
   FetchPerpsOpenOrdersRequest,

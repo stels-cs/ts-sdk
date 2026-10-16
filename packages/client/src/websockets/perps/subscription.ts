@@ -1,8 +1,8 @@
 import {
   type PerpsMarketDataEvent,
   PerpsMarketDataEventSchema,
-} from '@polymarket/bindings/subscriptions';
-import { invariant } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/subscriptions';
+import { invariant } from '@polymarket-client-open/types';
 import type {
   PerpsMarketDataSubscription,
   SubscriptionHandle,

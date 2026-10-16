@@ -1,6 +1,9 @@
-import { toComboConditionId } from '@polymarket/bindings';
-import { createSecureClient, type SecureClient } from '@polymarket/client';
-import { expectPresent } from '@polymarket/types';
+import { toComboConditionId } from '@polymarket-client-open/bindings';
+import {
+  createSecureClient,
+  type SecureClient,
+} from '@polymarket-client-open/client';
+import { expectPresent } from '@polymarket-client-open/types';
 import { vi } from 'vitest';
 import { describe, expect, it, publicClient } from './fixtures';
 import { findHighVolumeLowPriceMarket } from './markets';

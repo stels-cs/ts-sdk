@@ -1,4 +1,4 @@
-import { EvmAddressSchema } from '@polymarket/bindings';
+import { EvmAddressSchema } from '@polymarket-client-open/bindings';
 import { z } from 'zod';
 
 /**

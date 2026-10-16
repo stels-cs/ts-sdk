@@ -2,8 +2,8 @@ import {
   EvmAddressSchema,
   type PaginationCursor,
   PaginationCursorSchema,
-} from '@polymarket/bindings';
-import { WalletType } from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   FetchPerpsCandlesResponseSchema,
   FetchPerpsFeesResponseSchema,
@@ -36,7 +36,7 @@ import {
   PerpsTradeIdSchema,
   type PerpsWithdrawalId,
   PerpsWithdrawResponseSchema,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 import {
   type EvmAddress,
   type EvmSignature,
@@ -47,7 +47,7 @@ import {
   isSameEvmAddress,
   type PrivateKey,
   unwrap,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { Address, Secp256k1, TypedData } from 'ox';
 import { z } from 'zod';
 import { MAX_UINT256, perpsDepositCall } from '../abis';
@@ -1854,14 +1854,14 @@ export type {
   PerpsChase,
   PerpsChaseAccepted,
   PerpsChaseId,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 /** @experimental This API may change in a breaking way in any release, including patch releases. */
 export {
   type PerpsTwap,
   type PerpsTwapAccepted,
   type PerpsTwapId,
   PerpsTwapStatus,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 /** @experimental This API may change in a breaking way in any release, including patch releases. */
 export {
   CancelPerpsChaseError,

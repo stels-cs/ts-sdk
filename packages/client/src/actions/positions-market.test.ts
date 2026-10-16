@@ -2,7 +2,7 @@ import {
   type Market,
   MarketSchema,
   ProtocolVersion,
-} from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings/gamma';
 import { describe, expect, it } from 'vitest';
 import { UnexpectedResponseError } from '../errors';
 import {

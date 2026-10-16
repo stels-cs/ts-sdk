@@ -1,8 +1,8 @@
 import {
   type CancelOrdersResponse,
   CancelOrdersResponseSchema,
-} from '@polymarket/bindings/clob';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/clob';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseSecureClient } from '../../clients';
 import {

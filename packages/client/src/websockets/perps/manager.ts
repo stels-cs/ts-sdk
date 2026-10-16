@@ -1,4 +1,4 @@
-import type { PerpsCredentials } from '@polymarket/bindings/perps';
+import type { PerpsCredentials } from '@polymarket-client-open/bindings/perps';
 import type { PerpsBuilderFeeApprover } from '../../actions/perps/builders';
 import { TransportError } from '../../errors';
 import type { PerpsBuilderTermsInput } from './actions/builder-terms';

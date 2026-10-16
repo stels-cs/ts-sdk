@@ -1,5 +1,9 @@
-import { type PositionId, type TokenId, toTokenId } from '@polymarket/bindings';
-import type * as BindingExports from '@polymarket/bindings/subscriptions';
+import {
+  type PositionId,
+  type TokenId,
+  toTokenId,
+} from '@polymarket-client-open/bindings';
+import type * as BindingExports from '@polymarket-client-open/bindings/subscriptions';
 import type {
   CryptoPriceEvent,
   CryptoPricesChainlinkTwapSixtyEvent,
@@ -13,7 +17,7 @@ import type {
   SportsEvent,
   StandardMarketEvent,
   UserEvent,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 import { describe, expectTypeOf, it } from 'vitest';
 import type {
   ConnectionLostError,

@@ -1,10 +1,13 @@
-import { toDecimalString, toEpochMilliseconds } from '@polymarket/bindings';
+import {
+  toDecimalString,
+  toEpochMilliseconds,
+} from '@polymarket-client-open/bindings';
 import {
   type PerpsInternalTransfer,
   PerpsInternalTransferDirection,
   type PerpsInternalTransferId,
-} from '@polymarket/bindings/perps';
-import { expectEvmAddress, expectPresent } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/perps';
+import { expectEvmAddress, expectPresent } from '@polymarket-client-open/types';
 import { describe, expect, it } from 'vitest';
 import { UnexpectedResponseError } from '../../../errors';
 import type { Page } from '../../../pagination';

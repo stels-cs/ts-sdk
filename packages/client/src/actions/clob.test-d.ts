@@ -5,13 +5,13 @@ import {
   type TokenId,
   toPositionId,
   toTokenId,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import type {
   LastTradePrice,
   Midpoints,
   Prices,
   Spreads,
-} from '@polymarket/bindings/clob';
+} from '@polymarket-client-open/bindings/clob';
 import { describe, expectTypeOf, it } from 'vitest';
 import type { DataActions } from '../decorators';
 import type {

@@ -1,4 +1,4 @@
-import type { PerpsKlineInterval } from '@polymarket/bindings/perps';
+import type { PerpsKlineInterval } from '@polymarket-client-open/bindings/perps';
 import type {
   CommentsEvent,
   CryptoPriceEvent,
@@ -30,8 +30,8 @@ import type {
   SportsEvent,
   StandardMarketEvent,
   UserEvent,
-} from '@polymarket/bindings/subscriptions';
-import { invariant, type Prettify } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/subscriptions';
+import { invariant, type Prettify } from '@polymarket-client-open/types';
 import merge from 'it-merge';
 import { z } from 'zod';
 import type {
@@ -67,11 +67,11 @@ export type {
   EquityTwapPriceEvent,
   EquityTwapPriceSnapshotEvent,
   PriceSource,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 export {
   KnownPriceSource,
   PriceProvider,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 
 // Event types — re-exported from bindings for consumer convenience.
 export type {

@@ -1,4 +1,4 @@
-import { invariant, type Tagged } from '@polymarket/types';
+import { invariant, type Tagged } from '@polymarket-client-open/types';
 import { UserInputError } from '../../errors';
 
 export const FIXED_SCALE = 1_000_000n;

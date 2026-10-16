@@ -1,15 +1,15 @@
-import { OrderSide } from '@polymarket/bindings';
+import { OrderSide } from '@polymarket-client-open/bindings';
 import {
   ComboAcceptFailureReason,
   type ComboMarket,
-} from '@polymarket/bindings/combos';
+} from '@polymarket-client-open/bindings/combos';
 import {
   createSecureClient,
   FetchRfqStatusError,
   type PublicClient,
   RfqStatus,
-} from '@polymarket/client';
-import { fetchRfqStatus } from '@polymarket/client/actions';
+} from '@polymarket-client-open/client';
+import { fetchRfqStatus } from '@polymarket-client-open/client/actions';
 import { describe, expect, it, runMeteredTests } from './fixtures';
 
 function loadComboLegPositionIds(): string[] | undefined {

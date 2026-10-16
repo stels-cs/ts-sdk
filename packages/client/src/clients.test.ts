@@ -1,11 +1,11 @@
-import { ApiKeySchema } from '@polymarket/bindings';
-import type { ApiKeyCreds } from '@polymarket/bindings/clob';
-import { WalletType } from '@polymarket/bindings/gamma';
+import { ApiKeySchema } from '@polymarket-client-open/bindings';
+import type { ApiKeyCreds } from '@polymarket-client-open/bindings/clob';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   type EvmAddress,
   expectEvmAddress,
   expectEvmSignature,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { HttpResponse, http } from 'msw';
 import { setupServer } from 'msw/node';
 import {

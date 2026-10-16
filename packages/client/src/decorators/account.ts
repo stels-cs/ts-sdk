@@ -1,7 +1,7 @@
 import type {
   ClobTrade,
   NotificationsResponse,
-} from '@polymarket/bindings/clob';
+} from '@polymarket-client-open/bindings/clob';
 import type {
   Activity,
   ComboActivity,
@@ -12,8 +12,8 @@ import type {
   UserPnlSeries,
   UserStats,
   UserVolume,
-} from '@polymarket/bindings/data';
-import type { Prettify } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/data';
+import type { Prettify } from '@polymarket-client-open/types';
 import {
   type DownloadAccountingSnapshotRequest,
   type DropNotificationsRequest,

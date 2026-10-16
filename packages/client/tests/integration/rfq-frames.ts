@@ -1,6 +1,6 @@
-import { SignatureType } from '@polymarket/bindings/clob';
-import { RfqExecutionStatus } from '@polymarket/bindings/combos';
-import { invariant } from '@polymarket/types';
+import { SignatureType } from '@polymarket-client-open/bindings/clob';
+import { RfqExecutionStatus } from '@polymarket-client-open/bindings/combos';
+import { invariant } from '@polymarket-client-open/types';
 
 export const RFQ_ID = 'rfq-1';
 export const QUOTE_ID = 'quote-1';

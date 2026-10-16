@@ -2,8 +2,8 @@ import {
   type MetaHolder,
   PriceHistoryInterval,
   type PriceHistoryPoint,
-} from '@polymarket/bindings/data';
-import type { Market } from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings/data';
+import type { Market } from '@polymarket-client-open/bindings/gamma';
 import { describe, expectTypeOf, it } from 'vitest';
 import type { DataActions } from '../decorators';
 import type { Paginated } from '../pagination';

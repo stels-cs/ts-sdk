@@ -6,8 +6,8 @@ import {
   toComboConditionId,
   toConditionId,
   toPositionId,
-} from '@polymarket/bindings';
-import type { Tagged } from '@polymarket/types';
+} from '@polymarket-client-open/bindings';
+import type { Tagged } from '@polymarket-client-open/types';
 import { AbiParameters, Hash } from 'ox';
 import { UserInputError } from './errors';
 

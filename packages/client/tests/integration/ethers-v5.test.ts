@@ -1,8 +1,11 @@
-import { OrderSide } from '@polymarket/bindings';
-import { createSecureClient } from '@polymarket/client';
-import { cancelOrder, fetchApiKeys } from '@polymarket/client/actions';
-import { signerFrom } from '@polymarket/client/ethers-v5';
-import { expectPresent } from '@polymarket/types';
+import { OrderSide } from '@polymarket-client-open/bindings';
+import { createSecureClient } from '@polymarket-client-open/client';
+import {
+  cancelOrder,
+  fetchApiKeys,
+} from '@polymarket-client-open/client/actions';
+import { signerFrom } from '@polymarket-client-open/client/ethers-v5';
+import { expectPresent } from '@polymarket-client-open/types';
 import { ethers } from 'ethers-v5';
 import { polygon } from 'viem/chains';
 import { describe, environment, expect, it, runMeteredTests } from './fixtures';

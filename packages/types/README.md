@@ -1,6 +1,6 @@
-# `@polymarket/types`
+# `@polymarket-client-open/types`
 
-The `@polymarket/types` package is shared TypeScript types for the Polymarket SDK.
+The `@polymarket-client-open/types` package is shared TypeScript types for the Polymarket SDK.
 
 ---
 
@@ -9,13 +9,13 @@ The `@polymarket/types` package is shared TypeScript types for the Polymarket SD
 ## Installation
 
 ```bash
-pnpm add @polymarket/types
+pnpm add @polymarket-client-open/types
 ```
 
 ## Usage
 
 ```ts
-import type { MarketId } from '@polymarket/types';
+import type { MarketId } from '@polymarket-client-open/types';
 ```
 
 ## Development
@@ -23,7 +23,7 @@ import type { MarketId } from '@polymarket/types';
 From the monorepo root:
 
 ```bash
-pnpm --filter @polymarket/types build
+pnpm --filter @polymarket-client-open/types build
 ```
 
 ## License

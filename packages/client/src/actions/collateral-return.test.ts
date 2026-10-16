@@ -1,11 +1,11 @@
-import { WalletType } from '@polymarket/bindings/gamma';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   errAsync,
   expectEvmAddress,
   type HexString,
   okAsync,
   type ResultAsync,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { describe, expect, it, vi } from 'vitest';
 import { encodeProxyCall } from '../abis';
 import type { BaseSecureClient } from '../clients';

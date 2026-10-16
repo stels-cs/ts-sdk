@@ -2,7 +2,7 @@ import {
   BuilderVolumeInterval,
   createPublicClient,
   LeaderboardWindow,
-} from '@polymarket/client';
+} from '@polymarket-client-open/client';
 
 const client = createPublicClient();
 

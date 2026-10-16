@@ -1,9 +1,9 @@
-import { PaginationCursorSchema } from '@polymarket/bindings';
+import { PaginationCursorSchema } from '@polymarket-client-open/bindings';
 import {
   ListMarketClarificationsResponseSchema,
   type MarketClarification,
   MarketClarificationState,
-} from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings/gamma';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {

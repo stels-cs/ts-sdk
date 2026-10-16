@@ -1,7 +1,14 @@
-import { type EvmAddress, EvmAddressSchema } from '@polymarket/bindings';
-import { FetchApprovalsResponseSchema } from '@polymarket/bindings/data';
-import { WalletType } from '@polymarket/bindings/gamma';
-import { type EvmSignature, type HexString, unwrap } from '@polymarket/types';
+import {
+  type EvmAddress,
+  EvmAddressSchema,
+} from '@polymarket-client-open/bindings';
+import { FetchApprovalsResponseSchema } from '@polymarket-client-open/bindings/data';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
+import {
+  type EvmSignature,
+  type HexString,
+  unwrap,
+} from '@polymarket-client-open/types';
 import { z } from 'zod';
 import {
   decodeErc20AllowanceResult,

@@ -1,4 +1,4 @@
-import { OrderSide, OrderSideSchema } from '@polymarket/bindings';
+import { OrderSide, OrderSideSchema } from '@polymarket-client-open/bindings';
 import {
   CreatePerpsTwapResponseSchema,
   FetchPerpsTwapsResponseSchema,
@@ -9,8 +9,8 @@ import {
   type PerpsTwap,
   type PerpsTwapAccepted,
   PerpsTwapIdSchema,
-} from '@polymarket/bindings/perps';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/perps';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import {
   makeErrorGuard,

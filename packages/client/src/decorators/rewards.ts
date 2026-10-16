@@ -6,8 +6,8 @@ import type {
   TotalUserEarning,
   UserEarning,
   UserRewardsEarning,
-} from '@polymarket/bindings/clob';
-import type { Prettify } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/clob';
+import type { Prettify } from '@polymarket-client-open/types';
 import {
   type FetchOrderScoringRequest,
   type FetchOrdersScoringRequest,

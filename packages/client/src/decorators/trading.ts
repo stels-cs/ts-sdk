@@ -4,8 +4,8 @@ import type {
   OpenOrder,
   OrderResponse,
   OrderResponses,
-} from '@polymarket/bindings/clob';
-import type { TxHash } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/clob';
+import type { TxHash } from '@polymarket-client-open/types';
 import {
   type CancelMarketOrdersRequest,
   type CancelOrderRequest,

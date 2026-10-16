@@ -1,6 +1,9 @@
-import { type ClobAssetId, OrderSide } from '@polymarket/bindings';
-import { AssetType } from '@polymarket/bindings/clob';
-import { type EvmAddress, isSameEvmAddress } from '@polymarket/types';
+import { type ClobAssetId, OrderSide } from '@polymarket-client-open/bindings';
+import { AssetType } from '@polymarket-client-open/bindings/clob';
+import {
+  type EvmAddress,
+  isSameEvmAddress,
+} from '@polymarket-client-open/types';
 import type { BaseSecureClient } from '../../clients';
 import { isV2PositionId } from '../../protocol';
 import { fetchBalanceAllowance } from '../account';

@@ -1,19 +1,22 @@
-import { OrderSide } from '@polymarket/bindings';
-import { AssetType } from '@polymarket/bindings/clob';
+import { OrderSide } from '@polymarket-client-open/bindings';
+import { AssetType } from '@polymarket-client-open/bindings/clob';
 import {
   type ApiKeyAuthorization,
   createSecureClient,
   type EnvironmentConfig,
   type EvmAddress,
   WalletType,
-} from '@polymarket/client';
+} from '@polymarket-client-open/client';
 import {
   cancelOrder,
   fetchApiKeys,
   fetchBalanceAllowance,
-} from '@polymarket/client/actions';
-import { type PrivyWalletConfig, signerFrom } from '@polymarket/client/privy';
-import { expectPresent } from '@polymarket/types';
+} from '@polymarket-client-open/client/actions';
+import {
+  type PrivyWalletConfig,
+  signerFrom,
+} from '@polymarket-client-open/client/privy';
+import { expectPresent } from '@polymarket-client-open/types';
 import { PrivyClient } from '@privy-io/node';
 import type { TestContext } from 'vitest';
 import { describe, expect, it, runMeteredTests } from './fixtures';

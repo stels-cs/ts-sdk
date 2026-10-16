@@ -2,8 +2,8 @@ import {
   BuilderCodeSchema,
   ConditionIdSchema,
   TokenIdSchema,
-} from '@polymarket/bindings';
-import type { MarketInfo } from '@polymarket/bindings/clob';
+} from '@polymarket-client-open/bindings';
+import type { MarketInfo } from '@polymarket-client-open/bindings/clob';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { UnexpectedResponseError } from '../../errors';
 import { OrderMetadataCache } from './cache';

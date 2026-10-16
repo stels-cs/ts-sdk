@@ -1,4 +1,4 @@
-import type { PrivateKey } from '@polymarket/types';
+import type { PrivateKey } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import {
   type BaseUnits,

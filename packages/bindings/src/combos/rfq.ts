@@ -2,7 +2,7 @@ import type {
   Erc1271Signature,
   EvmSignature,
   HexString,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { z } from 'zod';
 import {
   type SignatureType,

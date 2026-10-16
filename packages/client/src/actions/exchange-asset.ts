@@ -1,4 +1,4 @@
-import type { PositionId, TokenId } from '@polymarket/bindings';
+import type { PositionId, TokenId } from '@polymarket-client-open/bindings';
 import { z } from 'zod';
 
 const ExchangeAssetIdSchema = z

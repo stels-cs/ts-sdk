@@ -7,8 +7,8 @@ import {
   OrderType,
   PositiveDecimalNumberSchema,
   type TickSizeValue,
-} from '@polymarket/bindings';
-import type { EvmAddress } from '@polymarket/types';
+} from '@polymarket-client-open/bindings';
+import type { EvmAddress } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseSecureClient } from '../../clients';
 import { UserInputError } from '../../errors';

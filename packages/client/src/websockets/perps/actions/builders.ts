@@ -1,4 +1,7 @@
-import { EvmAddressSchema, toPaginationCursor } from '@polymarket/bindings';
+import {
+  EvmAddressSchema,
+  toPaginationCursor,
+} from '@polymarket-client-open/bindings';
 import {
   FetchPerpsBuilderApprovalsResponseSchema,
   ListPerpsBuilderEarningsResponseSchema,
@@ -6,8 +9,8 @@ import {
   type PerpsBuilderEarning,
   type PerpsBuilderEarningsSummary,
   PerpsBuilderEarningsSummarySchema,
-} from '@polymarket/bindings/perps';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/perps';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import { snakeCase, toSearchParams } from '../../../actions/params';
 import {

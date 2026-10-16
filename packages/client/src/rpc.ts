@@ -1,4 +1,4 @@
-import type { EvmAddress, HexString } from '@polymarket/types';
+import type { EvmAddress, HexString } from '@polymarket-client-open/types';
 import ky from 'ky';
 import {
   RequestRejectedError,

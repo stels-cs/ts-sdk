@@ -1,11 +1,11 @@
-import type { PerpsCancelOrderResult } from '@polymarket/bindings/perps';
+import type { PerpsCancelOrderResult } from '@polymarket-client-open/bindings/perps';
 
 export {
   type RealtimeErrorCode,
   RealtimeKnownErrorCode,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 
-import { PolymarketError } from '@polymarket/types';
+import { PolymarketError } from '@polymarket-client-open/types';
 import type { ZodError } from 'zod';
 import type { RateLimitUpdate } from './rate-limit';
 import {

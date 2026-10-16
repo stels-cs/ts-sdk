@@ -1,7 +1,7 @@
 import {
   setNonBlockingInterval,
   setNonBlockingTimeout,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import {
   TransportError,
   type WebSocketCloseCode,

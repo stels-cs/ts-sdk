@@ -1,5 +1,9 @@
-import { OrderSide, type PositionId, type TokenId } from '@polymarket/bindings';
-import { SignatureType } from '@polymarket/bindings/clob';
+import {
+  OrderSide,
+  type PositionId,
+  type TokenId,
+} from '@polymarket-client-open/bindings';
+import { SignatureType } from '@polymarket-client-open/bindings/clob';
 import {
   type Erc1271Signature,
   type EvmAddress,
@@ -7,7 +11,7 @@ import {
   expectErc1271Signature,
   expectHexString,
   type HexString,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { AbiParameters, Bytes, Hash } from 'ox';
 import type { TypedDataField, TypedDataPayload } from './types';
 

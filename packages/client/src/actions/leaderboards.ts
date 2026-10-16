@@ -1,4 +1,7 @@
-import { EvmAddressSchema, PaginationCursorSchema } from '@polymarket/bindings';
+import {
+  EvmAddressSchema,
+  PaginationCursorSchema,
+} from '@polymarket-client-open/bindings';
 import {
   type BiggestWinner,
   type BuilderStanding,
@@ -13,8 +16,8 @@ import {
   type TraderLeaderboardEntry,
   TraderLeaderboardSortSchema,
   type TraderLeaderboardStanding,
-} from '@polymarket/bindings/data';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/data';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {
@@ -36,7 +39,7 @@ export {
   BuilderVolumeInterval,
   LeaderboardWindow,
   TraderLeaderboardSort,
-} from '@polymarket/bindings/data';
+} from '@polymarket-client-open/bindings/data';
 
 const ListBuilderLeaderboardRequestSchema = z.object({
   cursor: PaginationCursorSchema.optional(),

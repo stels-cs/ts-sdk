@@ -3,7 +3,7 @@ import {
   toDecimalString,
   toEpochMilliseconds,
   toPaginationCursor,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   type PerpsBuilderApproval,
   type PerpsCredentials,
@@ -11,8 +11,11 @@ import {
   PerpsPnlInterval,
   PerpsSortDirection,
   PerpsTimeInForce,
-} from '@polymarket/bindings/perps';
-import { expectEvmAddress, expectPrivateKey } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/perps';
+import {
+  expectEvmAddress,
+  expectPrivateKey,
+} from '@polymarket-client-open/types';
 import { HttpResponse, http, ws } from 'msw';
 import { setupServer } from 'msw/node';
 import {

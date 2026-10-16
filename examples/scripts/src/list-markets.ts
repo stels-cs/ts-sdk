@@ -1,4 +1,4 @@
-import { createPublicClient } from '@polymarket/client';
+import { createPublicClient } from '@polymarket-client-open/client';
 
 const client = createPublicClient();
 

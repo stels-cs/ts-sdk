@@ -8,7 +8,7 @@ import {
   invariant,
   never,
   type TxHash,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import type { AuthorizationContext, PrivyClient } from '@privy-io/node';
 import { Hex } from 'ox';
 import {
@@ -36,11 +36,11 @@ import type {
 
 invariant(
   process.release.name === 'node',
-  'The @polymarket/client/privy entrypoint requires a Node.js runtime.',
+  'The @polymarket-client-open/client/privy entrypoint requires a Node.js runtime.',
 );
 invariant(
   typeof window === 'undefined' && typeof document === 'undefined',
-  'The @polymarket/client/privy entrypoint cannot be imported in a browser-like runtime.',
+  'The @polymarket-client-open/client/privy entrypoint cannot be imported in a browser-like runtime.',
 );
 
 export type PrivyWalletConfig = {

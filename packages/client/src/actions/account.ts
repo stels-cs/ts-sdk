@@ -1,7 +1,7 @@
 import {
   PaginationCursorSchema,
   toPaginationCursor,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   type AssetType,
   AssetTypeSchema,
@@ -27,8 +27,8 @@ import {
   UserEarningsPageSchema,
   type UserRewardsEarning,
   UserRewardsEarningsPageSchema,
-} from '@polymarket/bindings/clob';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/clob';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseSecureClient } from '../clients';
 import {

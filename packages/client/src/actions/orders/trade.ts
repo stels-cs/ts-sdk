@@ -1,5 +1,5 @@
-import { OrderSide } from '@polymarket/bindings';
-import type { OrderResponse } from '@polymarket/bindings/clob';
+import { OrderSide } from '@polymarket-client-open/bindings';
+import type { OrderResponse } from '@polymarket-client-open/bindings/clob';
 import type { BaseSecureClient } from '../../clients';
 import {
   CancelledSigningError,

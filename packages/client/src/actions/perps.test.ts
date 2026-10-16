@@ -1,8 +1,11 @@
 import {
   PerpsInternalTransferIdSchema,
   PerpsKlineInterval,
-} from '@polymarket/bindings/perps';
-import { expectEvmAddress, expectEvmSignature } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/perps';
+import {
+  expectEvmAddress,
+  expectEvmSignature,
+} from '@polymarket-client-open/types';
 import { HttpResponse, http } from 'msw';
 import { setupServer } from 'msw/node';
 import {

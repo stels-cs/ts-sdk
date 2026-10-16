@@ -2,12 +2,12 @@ import {
   BuilderCodeSchema,
   PaginationCursorSchema,
   toPaginationCursor,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   type BuilderTrade,
   END_CURSOR,
   PaginatedBuilderTradesSchema,
-} from '@polymarket/bindings/clob';
+} from '@polymarket-client-open/bindings/clob';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {

@@ -1,6 +1,9 @@
-import type { ClobAssetId, TickSizeValue } from '@polymarket/bindings';
-import type { EvmAddress } from '@polymarket/types';
-import { invariant } from '@polymarket/types';
+import type {
+  ClobAssetId,
+  TickSizeValue,
+} from '@polymarket-client-open/bindings';
+import type { EvmAddress } from '@polymarket-client-open/types';
+import { invariant } from '@polymarket-client-open/types';
 import type { BaseSecureClient } from '../../clients';
 import { UserInputError } from '../../errors';
 import { isV2PositionId } from '../../protocol';

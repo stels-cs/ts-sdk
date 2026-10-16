@@ -1,4 +1,4 @@
-import { PerpsKlineInterval } from '@polymarket/bindings/perps';
+import { PerpsKlineInterval } from '@polymarket-client-open/bindings/perps';
 import { ws } from 'msw';
 import { setupServer } from 'msw/node';
 import {

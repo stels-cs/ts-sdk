@@ -4,7 +4,7 @@ import {
   expectTxHash,
   type HexString,
   type TxHash,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { ethers } from 'ethers-v5';
 import {
   CancelledSigningError,

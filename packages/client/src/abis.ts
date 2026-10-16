@@ -3,8 +3,12 @@ import type {
   ConditionId,
   PositionId,
   TokenId,
-} from '@polymarket/bindings';
-import { type EvmAddress, type HexString, invariant } from '@polymarket/types';
+} from '@polymarket-client-open/bindings';
+import {
+  type EvmAddress,
+  type HexString,
+  invariant,
+} from '@polymarket-client-open/types';
 import { AbiFunction, AbiParameters } from 'ox';
 import { makeErrorGuard, UserInputError } from './errors';
 import type { CanonicalComboLegs } from './protocol';

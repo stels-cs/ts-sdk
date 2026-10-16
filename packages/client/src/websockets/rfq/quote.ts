@@ -3,15 +3,15 @@ import {
   type DecimalString,
   OrderSide,
   type PositionId,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   RfqDirection,
   type RfqQuoteRequest,
   type RfqRequestedSize,
   RfqRequestedSizeUnit,
   type RfqSignedOrder,
-} from '@polymarket/bindings/combos';
-import type { EvmAddress } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/combos';
+import type { EvmAddress } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { RfqQuoteResponse, RfqQuoteSource } from '../../actions/rfq';
 import { UserInputError } from '../../errors';

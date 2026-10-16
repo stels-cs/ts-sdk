@@ -1,5 +1,8 @@
-import { ActivityType, ComboActivityType } from '@polymarket/client';
-import { expectPresent, isSameEvmAddress } from '@polymarket/types';
+import {
+  ActivityType,
+  ComboActivityType,
+} from '@polymarket-client-open/client';
+import { expectPresent, isSameEvmAddress } from '@polymarket-client-open/types';
 import { describe, expect, it } from './fixtures';
 import { expectNonEmptyPage, expectPageWindow } from './helpers';
 

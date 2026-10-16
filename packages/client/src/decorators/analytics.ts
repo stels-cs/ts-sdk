@@ -1,10 +1,10 @@
-import type { BuilderTrade } from '@polymarket/bindings/clob';
+import type { BuilderTrade } from '@polymarket-client-open/bindings/clob';
 import type {
   BiggestWinner,
   BuilderStanding,
   BuilderVolumePoint,
   TraderLeaderboardEntry,
-} from '@polymarket/bindings/data';
+} from '@polymarket-client-open/bindings/data';
 import {
   type FetchBuilderVolumeRequest,
   fetchBuilderVolume,

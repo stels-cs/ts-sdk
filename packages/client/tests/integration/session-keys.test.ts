@@ -1,4 +1,4 @@
-import { OrderSide } from '@polymarket/bindings';
+import { OrderSide } from '@polymarket-client-open/bindings';
 import {
   createSecureClient,
   OrderPostStatus,
@@ -6,9 +6,9 @@ import {
   SignerType,
   TransferPerpsCollateralError,
   UserInputError,
-} from '@polymarket/client';
-import { privateKey } from '@polymarket/client/viem';
-import { expectPresent } from '@polymarket/types';
+} from '@polymarket-client-open/client';
+import { privateKey } from '@polymarket-client-open/client/viem';
+import { expectPresent } from '@polymarket-client-open/types';
 import { http } from 'viem';
 import { generatePrivateKey } from 'viem/accounts';
 import { vi } from 'vitest';

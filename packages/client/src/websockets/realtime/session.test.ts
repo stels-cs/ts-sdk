@@ -1,11 +1,14 @@
-import { toDecimalString, toEpochMilliseconds } from '@polymarket/bindings';
+import {
+  toDecimalString,
+  toEpochMilliseconds,
+} from '@polymarket-client-open/bindings';
 import {
   type CryptoPriceEvent,
   type EquityTwapPriceEvent,
   KnownPriceSource,
   type PriceSource,
   RealtimeKnownErrorCode,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   ConnectionLostError,

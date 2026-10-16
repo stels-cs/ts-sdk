@@ -1,4 +1,4 @@
-import { OrderSide, OrderType } from '@polymarket/bindings';
+import { OrderSide, OrderType } from '@polymarket-client-open/bindings';
 import { describe, expect, it } from 'vitest';
 import {
   adjustBuyAmountForFees,

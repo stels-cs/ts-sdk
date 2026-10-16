@@ -3,8 +3,11 @@ import type {
   ClobAssetId,
   ConditionId,
   TickSizeValue,
-} from '@polymarket/bindings';
-import type { MarketFeeInfo, MarketInfo } from '@polymarket/bindings/clob';
+} from '@polymarket-client-open/bindings';
+import type {
+  MarketFeeInfo,
+  MarketInfo,
+} from '@polymarket-client-open/bindings/clob';
 import type { BaseClient } from '../../clients';
 import { UnexpectedResponseError } from '../../errors';
 import {

@@ -1,6 +1,6 @@
-import { SignatureType } from '@polymarket/bindings/clob';
-import { WalletType } from '@polymarket/bindings/gamma';
-import type { HexString } from '@polymarket/types';
+import { SignatureType } from '@polymarket-client-open/bindings/clob';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
+import type { HexString } from '@polymarket-client-open/types';
 import {
   type Erc1271Signature,
   type EvmAddress,
@@ -11,7 +11,7 @@ import {
   isSameEvmAddress,
   type SessionSignerSignature,
   ZERO_ADDRESS,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { AbiParameters, Bytes, ContractAddress, Hash } from 'ox';
 import type { EnvironmentConfig, WalletDerivationConfig } from './environments';
 import type { JsonRpcClient } from './rpc';

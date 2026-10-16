@@ -1,6 +1,14 @@
-import { OrderSide, OrderType, toTokenId } from '@polymarket/bindings';
-import { SignatureType } from '@polymarket/bindings/clob';
-import type { EvmAddress, EvmSignature, HexString } from '@polymarket/types';
+import {
+  OrderSide,
+  OrderType,
+  toTokenId,
+} from '@polymarket-client-open/bindings';
+import { SignatureType } from '@polymarket-client-open/bindings/clob';
+import type {
+  EvmAddress,
+  EvmSignature,
+  HexString,
+} from '@polymarket-client-open/types';
 import { TypedData } from 'ox';
 import { describe, expect, it } from 'vitest';
 import { ExchangeOrderProtocolVersion } from '../../exchange';

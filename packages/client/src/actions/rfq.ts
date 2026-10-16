@@ -4,7 +4,7 @@ import type {
   EpochMilliseconds,
   PositionId,
   TxHash,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   OrderSide,
   OrderSideSchema,
@@ -13,7 +13,7 @@ import {
   toPositionId,
   toRfqId,
   toRfqQuoteId,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import type {
   RfqConfirmationAck as BindingRfqConfirmationAck,
   RfqQuoteAck as BindingRfqQuoteAck,
@@ -33,7 +33,7 @@ import type {
   RfqRequestedSize,
   RfqRequestorPublicId,
   RfqSignedOrder,
-} from '@polymarket/bindings/combos';
+} from '@polymarket-client-open/bindings/combos';
 import {
   BuilderRfqCreateResponseSchema,
   BuilderRfqStatusResponseSchema,
@@ -47,9 +47,9 @@ import {
   RfqSide,
   RfqStatus,
   type RfqTrade,
-} from '@polymarket/bindings/combos';
-import type { EvmSignature } from '@polymarket/types';
-import { delay, PolymarketError, unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/combos';
+import type { EvmSignature } from '@polymarket-client-open/types';
+import { delay, PolymarketError, unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseSecureClient } from '../clients';
 import {
@@ -86,7 +86,7 @@ export {
   RfqRequestedSizeUnit,
   RfqSide,
   RfqStatus,
-} from '@polymarket/bindings/combos';
+} from '@polymarket-client-open/bindings/combos';
 export type {
   BuilderRfqError,
   RfqConfirmationRequest,

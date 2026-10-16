@@ -3,8 +3,8 @@ import {
   type SportsMarketTypesResponse,
   SportsMarketTypesResponseSchema,
   type SportsMetadata,
-} from '@polymarket/bindings/gamma';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/gamma';
+import { unwrap } from '@polymarket-client-open/types';
 import type { BaseClient } from '../clients';
 import {
   makeErrorGuard,

@@ -1,11 +1,11 @@
-import type { TransactionId } from '@polymarket/bindings';
+import type { TransactionId } from '@polymarket-client-open/bindings';
 import {
   type EvmAddress,
   type EvmSignature,
   type HexString,
   invariant,
   type TxHash,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import type { WaitForGaslessTransactionError } from './actions';
 import {
   makeErrorGuard,

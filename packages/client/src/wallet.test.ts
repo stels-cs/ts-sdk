@@ -1,10 +1,10 @@
-import { SignatureType } from '@polymarket/bindings/clob';
-import { WalletType } from '@polymarket/bindings/gamma';
+import { SignatureType } from '@polymarket-client-open/bindings/clob';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   expectEvmAddress,
   expectEvmSignature,
   ZERO_ADDRESS,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { HttpResponse, http } from 'msw';
 import { setupServer } from 'msw/node';
 import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest';

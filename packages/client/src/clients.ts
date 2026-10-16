@@ -1,13 +1,16 @@
-import { ApiKeySchema, EvmAddressSchema } from '@polymarket/bindings';
-import type { ApiKeyCreds } from '@polymarket/bindings/clob';
-import { WalletType } from '@polymarket/bindings/gamma';
+import {
+  ApiKeySchema,
+  EvmAddressSchema,
+} from '@polymarket-client-open/bindings';
+import type { ApiKeyCreds } from '@polymarket-client-open/bindings/clob';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   expectEvmAddress,
   expectEvmSignature,
   invariant,
   isSameEvmAddress,
   type Prettify,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { z } from 'zod';
 import {
   createOrDeriveApiKey,

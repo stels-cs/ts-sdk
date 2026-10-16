@@ -1,4 +1,4 @@
-import { ComboPositionStatus } from '@polymarket/bindings/data';
+import { ComboPositionStatus } from '@polymarket-client-open/bindings/data';
 import { describe, it } from 'vitest';
 import type { ListComboPositionsRequest } from './portfolio';
 

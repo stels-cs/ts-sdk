@@ -1,6 +1,9 @@
-import { toPaginationCursor } from '@polymarket/bindings';
-import { createPublicClient, UserInputError } from '@polymarket/client';
-import { expectPresent } from '@polymarket/types';
+import { toPaginationCursor } from '@polymarket-client-open/bindings';
+import {
+  createPublicClient,
+  UserInputError,
+} from '@polymarket-client-open/client';
+import { expectPresent } from '@polymarket-client-open/types';
 import { afterEach, vi } from 'vitest';
 import { describe, environment, expect, it } from './fixtures';
 import { expectNonEmptyPage, expectPageWindow } from './helpers';

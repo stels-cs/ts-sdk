@@ -1,11 +1,11 @@
-import { PaginationCursorSchema } from '@polymarket/bindings';
+import { PaginationCursorSchema } from '@polymarket-client-open/bindings';
 import {
   type Event,
   type Profile,
   type PublicSearchResponse,
   PublicSearchResponseSchema,
   type SearchTag,
-} from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings/gamma';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {

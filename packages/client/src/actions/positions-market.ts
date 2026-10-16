@@ -3,9 +3,12 @@ import type {
   MarketId,
   PositionId,
   TokenId,
-} from '@polymarket/bindings';
-import { type Market, ProtocolVersion } from '@polymarket/bindings/gamma';
-import { isPresent } from '@polymarket/types';
+} from '@polymarket-client-open/bindings';
+import {
+  type Market,
+  ProtocolVersion,
+} from '@polymarket-client-open/bindings/gamma';
+import { isPresent } from '@polymarket-client-open/types';
 import { UnexpectedResponseError } from '../errors';
 
 export enum PositionProtocol {

@@ -1,4 +1,4 @@
-import type { ApiKeyCreds } from '@polymarket/bindings/clob';
+import type { ApiKeyCreds } from '@polymarket-client-open/bindings/clob';
 import {
   type RfqConfirmationDecision,
   type RfqErrorMessage,
@@ -7,8 +7,11 @@ import {
   type RfqQuoteRequest,
   RfqQuoterInboundMessageSchema,
   type RfqQuoterOutboundMessage,
-} from '@polymarket/bindings/combos';
-import { type EvmAddress, setNonBlockingTimeout } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/combos';
+import {
+  type EvmAddress,
+  setNonBlockingTimeout,
+} from '@polymarket-client-open/types';
 import { type Pushable, pushable } from 'it-pushable';
 import type {
   RfqCancelQuoteAck,

@@ -3,7 +3,7 @@ import {
   type SecureClient,
   type TransactionOutcome,
   WalletType,
-} from '@polymarket/client';
+} from '@polymarket-client-open/client';
 import { describe, expect, it } from './fixtures';
 
 describe('Gasless', () => {

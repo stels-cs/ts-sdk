@@ -5,15 +5,18 @@ import type {
   OrderType,
   PositionId,
   TokenId,
-} from '@polymarket/bindings';
-import type { OrderResponse, SignatureType } from '@polymarket/bindings/clob';
+} from '@polymarket-client-open/bindings';
+import type {
+  OrderResponse,
+  SignatureType,
+} from '@polymarket-client-open/bindings/clob';
 import type {
   Erc1271Signature,
   EvmAddress,
   EvmSignature,
   HexString,
   SessionSignerSignature,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import type { ExchangeOrderProtocolVersion } from '../../exchange';
 import type { TypedDataPayload } from '../../types';
 import type { SignOrderRequest } from '../../workflow';

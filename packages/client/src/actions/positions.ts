@@ -4,18 +4,18 @@ import type {
   MarketId,
   PositionId,
   TokenId,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   ConditionIdSchema,
   MarketIdSchema,
   PositionIdSchema,
-} from '@polymarket/bindings';
-import { WalletType } from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   type EvmAddress,
   type EvmSignature,
   invariant,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { z } from 'zod';
 import {
   combinatorialPrepareConditionCall,

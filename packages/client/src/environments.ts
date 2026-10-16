@@ -1,4 +1,7 @@
-import { type EvmAddress, expectEvmAddress } from '@polymarket/types';
+import {
+  type EvmAddress,
+  expectEvmAddress,
+} from '@polymarket-client-open/types';
 import type { Hex } from 'ox';
 
 export type WalletDerivationConfig = {

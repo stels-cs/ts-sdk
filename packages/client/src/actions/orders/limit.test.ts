@@ -1,4 +1,4 @@
-import { OrderSide } from '@polymarket/bindings';
+import { OrderSide } from '@polymarket-client-open/bindings';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { validatePriceOnTickGrid } from './context';
 import { PrepareLimitOrderParamsSchema } from './limit';

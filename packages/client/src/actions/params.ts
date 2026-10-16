@@ -1,4 +1,4 @@
-import { EventIdSchema } from '@polymarket/bindings';
+import { EventIdSchema } from '@polymarket-client-open/bindings';
 import { z } from 'zod';
 
 export type SearchParamPrimitive = boolean | number | string;

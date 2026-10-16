@@ -1,5 +1,5 @@
-import { OrderSide } from '@polymarket/bindings';
-import { PerpsTimeInForce } from '@polymarket/bindings/perps';
+import { OrderSide } from '@polymarket-client-open/bindings';
+import { PerpsTimeInForce } from '@polymarket-client-open/bindings/perps';
 import { describe, it } from 'vitest';
 import type { PerpsSession } from '../session';
 import type {

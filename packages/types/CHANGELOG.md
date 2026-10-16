@@ -1,4 +1,4 @@
-# @polymarket/types
+# @polymarket-client-open/types
 
 ## 0.2.0
 
@@ -14,7 +14,7 @@
 
 ### Patch Changes
 
-- 700acc9: Publish `expectPrivateKey` from `@polymarket/types` and republish the client against the corrected types package.
+- 700acc9: Publish `expectPrivateKey` from `@polymarket-client-open/types` and republish the client against the corrected types package.
 - 6e0f923: Add repository metadata required for npm trusted publishing provenance validation.
 - 0dc6339: Declare Node.js 24 as the minimum supported runtime for published SDK packages.
 - 3a8d59a: chore: configure packages for public beta release.
@@ -24,7 +24,7 @@
 
 ### Patch Changes
 
-- 700acc9: Publish `expectPrivateKey` from `@polymarket/types` and republish the client against the corrected types package.
+- 700acc9: Publish `expectPrivateKey` from `@polymarket-client-open/types` and republish the client against the corrected types package.
 
 ## 0.1.0-beta.3
 

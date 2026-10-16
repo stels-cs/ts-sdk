@@ -3,8 +3,8 @@ import {
   createSecureClient,
   OrderSide,
   type PublicClient,
-} from '@polymarket/client';
-import { delay, expectPresent } from '@polymarket/types';
+} from '@polymarket-client-open/client';
+import { delay, expectPresent } from '@polymarket-client-open/types';
 import { describe, expect, it, runMeteredTests } from './fixtures';
 import { findHighVolumeLowPriceMarket } from './markets';
 

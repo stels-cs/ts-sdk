@@ -1,4 +1,4 @@
-import { delay, errAsync, ResultAsync } from '@polymarket/types';
+import { delay, errAsync, ResultAsync } from '@polymarket-client-open/types';
 import { RateLimitError } from './errors';
 
 type SleepFn = (milliseconds: number) => Promise<void>;

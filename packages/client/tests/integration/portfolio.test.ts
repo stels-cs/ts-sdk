@@ -7,8 +7,8 @@ import {
   UserInputError,
   UserPnlFidelity,
   UserPnlInterval,
-} from '@polymarket/client';
-import { expectPresent, isSameEvmAddress } from '@polymarket/types';
+} from '@polymarket-client-open/client';
+import { expectPresent, isSameEvmAddress } from '@polymarket-client-open/types';
 import { afterEach, type MockInstance, vi } from 'vitest';
 import { describe, expect, it } from './fixtures';
 import { expectNonEmptyPage, expectPageWindow } from './helpers';

@@ -10,7 +10,7 @@ import type {
   PerpsPublicTrade,
   PerpsTicker,
   PerpsWithdrawalId,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 import {
   type DepositToPerpsRequest,
   depositToPerps,
@@ -516,14 +516,14 @@ export type {
   PerpsChase,
   PerpsChaseAccepted,
   PerpsChaseId,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 /** @experimental This API may change in a breaking way in any release, including patch releases. */
 export {
   type PerpsTwap,
   type PerpsTwapAccepted,
   type PerpsTwapId,
   PerpsTwapStatus,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 /** @experimental This API may change in a breaking way in any release, including patch releases. */
 export {
   CancelPerpsChaseError,

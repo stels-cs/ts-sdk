@@ -1,6 +1,6 @@
 import { encode } from '@msgpack/msgpack';
-import type { EvmSignature, PrivateKey } from '@polymarket/types';
-import { expectEvmSignature, invariant } from '@polymarket/types';
+import type { EvmSignature, PrivateKey } from '@polymarket-client-open/types';
+import { expectEvmSignature, invariant } from '@polymarket-client-open/types';
 import { Hash, Secp256k1, Signature, TypedData } from 'ox';
 import type { TypedDataPayload } from '../../types';
 

@@ -2,7 +2,7 @@ import {
   OrderSide,
   OrderSideSchema,
   toDecimalString,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   PerpsAutoCancelResponseSchema,
   PerpsCancelAllOrdersResponseSchema,
@@ -29,17 +29,17 @@ import {
   PerpsUpdateLeverageBatchResultSchema,
   type PerpsUpdateLeverageResult,
   PerpsUpdateLeverageResultSchema,
-} from '@polymarket/bindings/perps';
+} from '@polymarket-client-open/bindings/perps';
 import type {
   PerpsOrderUpdateEvent,
   PerpsSessionEvent,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 import {
   expectPresent,
   invariant,
   setNonBlockingTimeout,
   unwrap,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { z } from 'zod';
 import {
   AutoCancelDailyLimitError,

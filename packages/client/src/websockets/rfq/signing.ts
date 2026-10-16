@@ -2,9 +2,13 @@ import {
   type OrderSide,
   type PositionId,
   toBaseUnits,
-} from '@polymarket/bindings';
-import type { RfqSignedOrder } from '@polymarket/bindings/combos';
-import type { EvmAddress, EvmSignature, HexString } from '@polymarket/types';
+} from '@polymarket-client-open/bindings';
+import type { RfqSignedOrder } from '@polymarket-client-open/bindings/combos';
+import type {
+  EvmAddress,
+  EvmSignature,
+  HexString,
+} from '@polymarket-client-open/types';
 import { SigningError } from '../../errors';
 import {
   calculateExchangeOrderMakerAmount,

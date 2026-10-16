@@ -1,16 +1,16 @@
-import type { EvmAddress } from '@polymarket/bindings';
+import type { EvmAddress } from '@polymarket-client-open/bindings';
 import {
   type CollateralReturnPlanResponse,
   CollateralReturnPlanResponseSchema,
   CollateralReturnPlanSchema,
-} from '@polymarket/bindings/combos';
-import { WalletType } from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings/combos';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   type RelayerDepositWalletExecuteRequest,
   RelayerExecuteResponseSchema,
   type RelayerLegacyExecuteRequest,
   RelayerTransactionType,
-} from '@polymarket/bindings/relayer';
+} from '@polymarket-client-open/bindings/relayer';
 import {
   delay,
   type EvmSignature,
@@ -19,7 +19,7 @@ import {
   isSameEvmAddress,
   type NonEmptyArray,
   unwrap,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseSecureClient } from '../clients';
 import {
@@ -55,7 +55,7 @@ export {
   type CollateralReturnPositionAmount,
   type CollateralReturnPositionSummary,
   type CollateralReturnRouterCall,
-} from '@polymarket/bindings/combos';
+} from '@polymarket-client-open/bindings/combos';
 
 // Planning and submit re-validation both recompute wallet state server-side
 // and can take well beyond the transport's standard timeout.

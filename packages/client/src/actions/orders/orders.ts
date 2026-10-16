@@ -1,4 +1,4 @@
-import type { HexString } from '@polymarket/types';
+import type { HexString } from '@polymarket-client-open/types';
 import { ExchangeOrderProtocolVersion } from '../../exchange';
 import { isV2PositionId } from '../../protocol';
 import type { AccountIdentity } from '../../wallet';

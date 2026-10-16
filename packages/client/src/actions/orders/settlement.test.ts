@@ -1,10 +1,14 @@
-import { TradeStatus, TxHashSchema, toOrderId } from '@polymarket/bindings';
+import {
+  TradeStatus,
+  TxHashSchema,
+  toOrderId,
+} from '@polymarket-client-open/bindings';
 import {
   type AcceptedOrderResponse,
   type ClobTrade,
   ClobTradeSchema,
   OrderPostStatus,
-} from '@polymarket/bindings/clob';
+} from '@polymarket-client-open/bindings/clob';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import type { BaseSecureClient } from '../../clients';
 import { TimeoutError, TransactionFailedError } from '../../errors';

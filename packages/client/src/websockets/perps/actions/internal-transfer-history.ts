@@ -1,5 +1,5 @@
-import { toPaginationCursor } from '@polymarket/bindings';
-import type { PerpsInternalTransfer } from '@polymarket/bindings/perps';
+import { toPaginationCursor } from '@polymarket-client-open/bindings';
+import type { PerpsInternalTransfer } from '@polymarket-client-open/bindings/perps';
 import { UnexpectedResponseError } from '../../../errors';
 import type { Page } from '../../../pagination';
 

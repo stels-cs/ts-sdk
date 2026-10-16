@@ -298,7 +298,7 @@ export type SecureRfqActions = {
    * `FAILED`, `EXPIRED`, or `CANCELED`. Terminal failure is a normal outcome
    * and is returned, not thrown. A `TimeoutError` does not mean the trade
    * failed; resume with the `fetchRfqStatus` action from
-   * `@polymarket/client/actions`.
+   * `@polymarket-client-open/client/actions`.
    *
    * @throws {@link WaitForComboFillError}
    * Thrown on failure.

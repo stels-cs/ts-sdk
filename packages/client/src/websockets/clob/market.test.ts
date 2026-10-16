@@ -1,4 +1,4 @@
-import { toTokenId } from '@polymarket/bindings';
+import { toTokenId } from '@polymarket-client-open/bindings';
 import { ws } from 'msw';
 import { setupServer } from 'msw/node';
 import {

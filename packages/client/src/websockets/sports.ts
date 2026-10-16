@@ -1,7 +1,7 @@
 import {
   type SportsEvent,
   SportsResultEventSchema,
-} from '@polymarket/bindings/subscriptions';
+} from '@polymarket-client-open/bindings/subscriptions';
 import type {
   SportsSubscription,
   SubscriptionHandle,

@@ -1,4 +1,7 @@
-import { OrderSide, type TickSizeValue } from '@polymarket/bindings';
+import {
+  OrderSide,
+  type TickSizeValue,
+} from '@polymarket-client-open/bindings';
 import { resolveRoundingConfig } from './context';
 import {
   FIXED_SCALE,

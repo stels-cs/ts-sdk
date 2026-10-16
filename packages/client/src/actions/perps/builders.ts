@@ -1,11 +1,11 @@
-import { EvmAddressSchema } from '@polymarket/bindings';
+import { EvmAddressSchema } from '@polymarket-client-open/bindings';
 import {
   type PerpsBuilderApproval,
   PerpsBuilderApprovalSchema,
   type PerpsBuilderStatus,
   PerpsBuilderStatusSchema,
-} from '@polymarket/bindings/perps';
-import { type EvmSignature, unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/perps';
+import { type EvmSignature, unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient, BaseSecureClient } from '../../clients';
 import {

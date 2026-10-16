@@ -5,11 +5,11 @@ import {
   type PaginationCursor,
   PaginationCursorSchema,
   PositionIdSchema,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   type ComboMarket,
   ListComboMarketsResponseSchema,
-} from '@polymarket/bindings/combos';
+} from '@polymarket-client-open/bindings/combos';
 import {
   CanonicalMarketConditionIdSchema,
   FetchOpenInterestResponseSchema,
@@ -20,15 +20,15 @@ import {
   PriceHistoryInterval,
   PriceHistoryIntervalSchema,
   type PriceHistoryPoint,
-} from '@polymarket/bindings/data';
+} from '@polymarket-client-open/bindings/data';
 import {
   FetchMarketTagsResponseSchema,
   ListMarketsKeysetResponseSchema,
   type Market,
   MarketSchema,
   type TagReference,
-} from '@polymarket/bindings/gamma';
-import { unwrap } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/gamma';
+import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient } from '../clients';
 import {

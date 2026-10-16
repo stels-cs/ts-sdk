@@ -4,9 +4,12 @@ import {
   OrderType,
   PositiveDecimalNumberSchema,
   type TickSizeValue,
-} from '@polymarket/bindings';
-import type { OrderBook, OrderBookLevel } from '@polymarket/bindings/clob';
-import { invariant } from '@polymarket/types';
+} from '@polymarket-client-open/bindings';
+import type {
+  OrderBook,
+  OrderBookLevel,
+} from '@polymarket-client-open/bindings/clob';
+import { invariant } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import type { BaseClient } from '../../clients';
 import {

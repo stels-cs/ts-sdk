@@ -1,8 +1,8 @@
 import {
   type PriceEvent,
   RealtimeKnownErrorCode,
-} from '@polymarket/bindings/subscriptions';
-import { setNonBlockingTimeout } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/subscriptions';
+import { setNonBlockingTimeout } from '@polymarket-client-open/types';
 import type { PriceSubscriptionConfirmation } from '../../actions/subscriptions';
 import {
   ConnectionLostError,

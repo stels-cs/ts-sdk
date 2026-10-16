@@ -1,5 +1,5 @@
-import { WalletType } from '@polymarket/bindings/gamma';
-import { createSecureClient } from '@polymarket/client';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
+import { createSecureClient } from '@polymarket-client-open/client';
 import { describe, expect, it } from './fixtures';
 
 describe('Transfers', () => {

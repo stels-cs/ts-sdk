@@ -1,7 +1,10 @@
-import { OrderSide } from '@polymarket/bindings';
-import { UserOrderEventType } from '@polymarket/bindings/subscriptions';
-import { OrderPostStatus, type SecureClient } from '@polymarket/client';
-import { expectPresent } from '@polymarket/types';
+import { OrderSide } from '@polymarket-client-open/bindings';
+import { UserOrderEventType } from '@polymarket-client-open/bindings/subscriptions';
+import {
+  OrderPostStatus,
+  type SecureClient,
+} from '@polymarket-client-open/client';
+import { expectPresent } from '@polymarket-client-open/types';
 import {
   describe,
   expect,

@@ -2,8 +2,8 @@ import {
   type ApprovalContract,
   ApprovalStandard,
   type ApprovalsSnapshot,
-} from '@polymarket/bindings/data';
-import type { EvmAddress } from '@polymarket/types';
+} from '@polymarket-client-open/bindings/data';
+import type { EvmAddress } from '@polymarket-client-open/types';
 import { UnexpectedResponseError } from '../errors';
 import type { TradingApprovalRequirements } from './approvals';
 

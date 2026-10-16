@@ -1,12 +1,12 @@
-import { toPaginationCursor } from '@polymarket/bindings';
+import { toPaginationCursor } from '@polymarket-client-open/bindings';
 import {
   type Page,
   PaginationLimitError,
   SearchError,
   SearchSort,
   UserInputError,
-} from '@polymarket/client';
-import type { SearchResults } from '@polymarket/client/actions';
+} from '@polymarket-client-open/client';
+import type { SearchResults } from '@polymarket-client-open/client/actions';
 import { afterEach, vi } from 'vitest';
 import { describe, expect, it } from './fixtures';
 

@@ -1,13 +1,13 @@
 import type {
   CollateralReturnPlanResponse,
   SecureClient,
-} from '@polymarket/client';
+} from '@polymarket-client-open/client';
 import {
   createSecureClient,
   RequestRejectedError,
   WalletType,
-} from '@polymarket/client';
-import { expectHexString } from '@polymarket/types';
+} from '@polymarket-client-open/client';
+import { expectHexString } from '@polymarket-client-open/types';
 import { type TestContext, vi } from 'vitest';
 import { describe, expect, it, runMeteredTests } from './fixtures';
 

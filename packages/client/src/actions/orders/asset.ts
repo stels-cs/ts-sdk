@@ -1,4 +1,4 @@
-import { ClobAssetIdSchema } from '@polymarket/bindings';
+import { ClobAssetIdSchema } from '@polymarket-client-open/bindings';
 import { z } from 'zod';
 
 /** @internal */

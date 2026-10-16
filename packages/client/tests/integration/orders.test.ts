@@ -3,7 +3,7 @@ import {
   OrderSide,
   OrderType,
   toOrderId,
-} from '@polymarket/bindings';
+} from '@polymarket-client-open/bindings';
 import {
   createSecureClient,
   InsufficientLiquidityError,
@@ -12,8 +12,8 @@ import {
   type RateLimitUpdate,
   type SecureClient,
   UserInputError,
-} from '@polymarket/client';
-import { expectPresent } from '@polymarket/types';
+} from '@polymarket-client-open/client';
+import { expectPresent } from '@polymarket-client-open/types';
 import { afterAll, type MockInstance, vi } from 'vitest';
 import {
   describe,

@@ -4,20 +4,20 @@ import {
   SessionSignerKnownScope as SessionKeyKnownScope,
   type SessionSignerScope as SessionKeyScope,
   SessionSignerScopeSchema,
-} from '@polymarket/bindings';
-import { ActiveSessionSignersResponseSchema } from '@polymarket/bindings/clob';
-import { WalletType } from '@polymarket/bindings/gamma';
+} from '@polymarket-client-open/bindings';
+import { ActiveSessionSignersResponseSchema } from '@polymarket-client-open/bindings/clob';
+import { WalletType } from '@polymarket-client-open/bindings/gamma';
 import {
   RelayerAuthorizeSessionSignerResponseSchema,
   RelayerRevokeSessionSignerResponseSchema,
-} from '@polymarket/bindings/relayer';
+} from '@polymarket-client-open/bindings/relayer';
 import {
   delay,
   expectEvmAddress,
   isSameEvmAddress,
   unwrap,
   ZERO_ADDRESS,
-} from '@polymarket/types';
+} from '@polymarket-client-open/types';
 import { z } from 'zod';
 import { authorizeSessionSignerCall, revokeSessionSignerCall } from '../abis';
 import type { BaseSecureClient } from '../clients';

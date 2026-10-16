@@ -1,4 +1,4 @@
-# @polymarket/client
+# @polymarket-client-open/client
 
 ## 0.13.0
 
@@ -22,7 +22,7 @@
 - ae8b4e8: Emit server notification resync signals with the catch-up sequence and timestamp. Backfill and deduplicate by notification ID.
 - fcbe83c: Accept current terminal Perps order statuses so valid terminal updates resolve placement.
 - c7b7e1f: Parse HTTP-date `Retry-After` headers into nonnegative whole seconds. Retry policy is unchanged.
-- Update `@polymarket/bindings` to `0.13.0`.
+- Update `@polymarket-client-open/bindings` to `0.13.0`.
 
 ## 0.12.0
 
@@ -73,7 +73,7 @@
 - 54337ed: Support `CONDITIONAL-V2` balance and allowance reads and refreshes. Use the Protocol
   V2 position selector for both allowance checks and post-approval refreshes when
   automatically recovering a Protocol V2 sell order. Export `AssetType` from
-  `@polymarket/client` for explicit balance and allowance calls.
+  `@polymarket-client-open/client` for explicit balance and allowance calls.
 - Updated dependencies [5e30528]
 - Updated dependencies [348977a]
 - Updated dependencies [2393b48]
@@ -82,7 +82,7 @@
 - Updated dependencies [e7b7af1]
 - Updated dependencies [54337ed]
 - Updated dependencies [f3ba735]
-  - @polymarket/bindings@0.12.0
+  - @polymarket-client-open/bindings@0.12.0
 
 ## 0.11.0
 
@@ -108,10 +108,10 @@
 
 ### Patch Changes
 
-- d7ee164: Re-export the `OrderPostStatus` enum from `@polymarket/client`, so consumers can compare `AcceptedOrderResponse.status` without importing from `@polymarket/bindings/clob`.
+- d7ee164: Re-export the `OrderPostStatus` enum from `@polymarket-client-open/client`, so consumers can compare `AcceptedOrderResponse.status` without importing from `@polymarket-client-open/bindings/clob`.
 - 43409a7: Include explicit EIP712Domain types in authentication, deposit wallet order and batch, and Perps signing payloads for wallets that require complete typed data.
 - Updated dependencies [23b2cb0]
-  - @polymarket/bindings@0.11.0
+  - @polymarket-client-open/bindings@0.11.0
 
 ## 0.10.0
 
@@ -150,7 +150,7 @@
 - Updated dependencies [7992375]
 - Updated dependencies [7ed1af9]
 - Updated dependencies [d320dfa]
-  - @polymarket/bindings@0.10.0
+  - @polymarket-client-open/bindings@0.10.0
 
 ## 0.9.0
 
@@ -176,7 +176,7 @@
 - Updated dependencies [4486dee]
 - Updated dependencies [74ad47b]
 - Updated dependencies [01438a1]
-  - @polymarket/bindings@0.9.0
+  - @polymarket-client-open/bindings@0.9.0
 
 ## 0.8.1
 
@@ -201,7 +201,7 @@
 - Updated dependencies [a1959b6]
 - Updated dependencies [5c18246]
 - Updated dependencies [2fd5cc5]
-  - @polymarket/bindings@0.8.0
+  - @polymarket-client-open/bindings@0.8.0
 
 ## 0.7.0
 
@@ -228,14 +228,14 @@
 - Updated dependencies [d754986]
 - Updated dependencies [ccd6ef4]
 - Updated dependencies [0db340d]
-  - @polymarket/bindings@0.7.0
-  - @polymarket/types@0.2.0
+  - @polymarket-client-open/bindings@0.7.0
+  - @polymarket-client-open/types@0.2.0
 
 ## 0.6.0
 
 ### Minor Changes
 
-- 050331b: Add requester-side combo RFQ support: `client.requestComboQuote(...)`, `client.acceptComboQuote(...)`, and `client.waitForComboFill(...)`, plus the `fetchRfqStatus` action in `@polymarket/client/actions`. Requests authenticate with the client's Builder API Key (`builderApiKey(...)` or `remoteBuilderSigning(...)`), and winning quotes are self-contained JSON values that may be persisted or routed between processes before acceptance. SELL quotes expose exact post-fee collateral proceeds as `netReceive`. Business outcomes such as no quotes, a maker declining, or an expired acceptance window are returned as result values; gateway rejections throw the new `RfqRequestRejectedError` with a classified `RfqRejectionCode`.
+- 050331b: Add requester-side combo RFQ support: `client.requestComboQuote(...)`, `client.acceptComboQuote(...)`, and `client.waitForComboFill(...)`, plus the `fetchRfqStatus` action in `@polymarket-client-open/client/actions`. Requests authenticate with the client's Builder API Key (`builderApiKey(...)` or `remoteBuilderSigning(...)`), and winning quotes are self-contained JSON values that may be persisted or routed between processes before acceptance. SELL quotes expose exact post-fee collateral proceeds as `netReceive`. Business outcomes such as no quotes, a maker declining, or an expired acceptance window are returned as result values; gateway rejections throw the new `RfqRequestRejectedError` with a classified `RfqRejectionCode`.
 - dd427eb: Expose PolyV2 position IDs alongside CTF token IDs on normalized market outcomes, preserve the deprecated market-level position ID array for compatibility, and introduce protocol-neutral condition ID APIs while retaining `CtfConditionId`, `CtfConditionIdSchema`, `OptionalCtfConditionIdSchema`, and `toCtfConditionId` as deprecated compatibility aliases.
 
 ### Patch Changes
@@ -244,7 +244,7 @@
 - Updated dependencies [f2f1817]
 - Updated dependencies [050331b]
 - Updated dependencies [dd427eb]
-  - @polymarket/bindings@0.6.0
+  - @polymarket-client-open/bindings@0.6.0
 
 ## 0.5.0
 
@@ -258,7 +258,7 @@
 - f6d1542: Prevent Perps `placeOrder` from missing private order updates that arrive before the command acknowledgement. High-level placement now generates a client order ID when callers omit it.
 - Updated dependencies [fb81779]
 - Updated dependencies [4c56d7b]
-  - @polymarket/bindings@0.5.0
+  - @polymarket-client-open/bindings@0.5.0
 
 ## 0.4.0
 
@@ -271,7 +271,7 @@
 - 4911f43: Add Perps session support for adjusting isolated position margin.
 - Updated dependencies [2ba6be3]
 - Updated dependencies [5a6b56c]
-  - @polymarket/bindings@0.4.0
+  - @polymarket-client-open/bindings@0.4.0
 
 ## 0.3.0
 
@@ -295,7 +295,7 @@
 - Updated dependencies [40dc38d]
 - Updated dependencies [c092352]
 - Updated dependencies [4ddf659]
-  - @polymarket/bindings@0.3.0
+  - @polymarket-client-open/bindings@0.3.0
 
 ## 0.3.0-beta.1
 
@@ -309,7 +309,7 @@
 - c092352: Migrate Perps fills pagination to the API-native cursor and add a fills time sort direction option.
 - Updated dependencies [40dc38d]
 - Updated dependencies [c092352]
-  - @polymarket/bindings@0.3.0-beta.1
+  - @polymarket-client-open/bindings@0.3.0-beta.1
 
 ## 0.3.0-beta.0
 
@@ -326,7 +326,7 @@
 - Updated dependencies [28813f6]
 - Updated dependencies [7463938]
 - Updated dependencies [4ddf659]
-  - @polymarket/bindings@0.3.0-beta.0
+  - @polymarket-client-open/bindings@0.3.0-beta.0
 
 ## 0.2.0
 
@@ -350,7 +350,7 @@
 - Updated dependencies [d29c369]
 - Updated dependencies [9b13de2]
 - Updated dependencies [3ae2f13]
-  - @polymarket/bindings@0.2.0
+  - @polymarket-client-open/bindings@0.2.0
 
 ## 0.1.0
 
@@ -391,14 +391,14 @@
 - 6082a3e: Make pagination request cursor inputs infer the branded pagination cursor type.
 - 1182ebb: Improve the Perps public SDK surface with explicit request types, root exports, and TSDoc examples.
 - d230d3a: Preserve `groupItemTitle` on normalized market responses.
-- 700acc9: Publish `expectPrivateKey` from `@polymarket/types` and republish the client against the corrected types package.
-- e8c3230: Export `PriceHistoryInterval` from `@polymarket/client`.
+- 700acc9: Publish `expectPrivateKey` from `@polymarket-client-open/types` and republish the client against the corrected types package.
+- e8c3230: Export `PriceHistoryInterval` from `@polymarket-client-open/client`.
 - d731b5b: Add `listMarketClarifications` for reading market clarification text, with SDK-owned offset pagination and market/event/state/question/tx filters.
 - 8790a22: Normalize empty-string optional decimal fields on streamed market and trade events to null (for example a trade's `feeRateBps` and a price change's `bestBid`/`bestAsk`), so consumers never receive `''` where a decimal string or null is expected.
 - e8abc2a: Return branded decimal string types from CLOB price read helpers instead of widening validated decimal strings to plain strings.
 - ea844f3: Strengthen CLOB batch price read result types so midpoint, price, and spread lookups are keyed by `TokenId`. `fetchPrices` now returns partial `OrderSide` records containing decimal strings, while `fetchMidpoints` and `fetchSpreads` return token ID keyed decimal strings.
 - 66fb8a8: Drop unknown WebSocket frames without closing the connection. Frames that fail to parse — new frame types, malformed known frames, or known frames carrying values the SDK does not model — are silently discarded on every stream, and subsequent events keep flowing. In particular, the RFQ quoter session no longer fails with `TransportError` on an unrecognized or unreadable frame: the frame is dropped, the session stays open, and a caller waiting on an unreadable acknowledgement fails through its acknowledgement timeout. Well-formed but uncorrelated RFQ errors still fail the session.
-- e60eefc: Type CLOB cancellation results with a branded `OrderId`. `CancelOrdersResponse` now exposes `canceled` as `OrderId[]` and keys `notCanceled` by `OrderId` across `cancelOrder`, `cancelOrders`, `cancelMarketOrders`, and `cancelAll`. Runtime values and wire shapes are unchanged; the new `OrderId` type, `toOrderId`, and `OrderIdSchema` are exported from `@polymarket/bindings`.
+- e60eefc: Type CLOB cancellation results with a branded `OrderId`. `CancelOrdersResponse` now exposes `canceled` as `OrderId[]` and keys `notCanceled` by `OrderId` across `cancelOrder`, `cancelOrders`, `cancelMarketOrders`, and `cancelAll`. Runtime values and wire shapes are unchanged; the new `OrderId` type, `toOrderId`, and `OrderIdSchema` are exported from `@polymarket-client-open/bindings`.
 - 0f25328: Remove the unreleased `QUOTE_VALIDATION_TIMEOUT_INTERNAL` member from `RfqKnownErrorCode`. The gateway now reports quote-validation timeouts as `SERVICE_UNAVAILABLE`; gateways still emitting the internal code during rollout flow through the open `RfqErrorCode` type as plain strings.
 - 55d0ecf: Allow GTD limit order expirations exactly 60 seconds in the future and document using an additional latency buffer.
 - c6e0285: Parse RFQ quote rejections that use the `SUBMISSION_WINDOW_CLOSED` gateway error code.
@@ -503,8 +503,8 @@
 - Updated dependencies [d045298]
 - Updated dependencies [50d56ce]
 - Updated dependencies [d144ca9]
-  - @polymarket/bindings@0.1.0
-  - @polymarket/types@0.1.0
+  - @polymarket-client-open/bindings@0.1.0
+  - @polymarket-client-open/types@0.1.0
 
 ## 0.1.0-beta.18
 
@@ -513,7 +513,7 @@
 - 66fb8a8: Drop unknown WebSocket frames without closing the connection. Frames that fail to parse — new frame types, malformed known frames, or known frames carrying values the SDK does not model — are silently discarded on every stream, and subsequent events keep flowing. In particular, the RFQ quoter session no longer fails with `TransportError` on an unrecognized or unreadable frame: the frame is dropped, the session stays open, and a caller waiting on an unreadable acknowledgement fails through its acknowledgement timeout. Well-formed but uncorrelated RFQ errors still fail the session.
 - e8584aa: Remove the retired CLOB v1 Neg Risk Adapter from `setupTradingApprovals` and `prepareTradingApprovals`. The setup flow no longer grants a MAX collateral allowance or ERC-1155 approval-for-all to the retired adapter; all current exchanges, collateral adapters, and the auto-redeem operator remain approved.
 - Updated dependencies [7633fad]
-  - @polymarket/bindings@0.1.0-beta.16
+  - @polymarket-client-open/bindings@0.1.0-beta.16
 
 ## 0.1.0-beta.17
 
@@ -536,7 +536,7 @@
 - Updated dependencies [b434b43]
 - Updated dependencies [1e707cd]
 - Updated dependencies [50d56ce]
-  - @polymarket/bindings@0.1.0-beta.15
+  - @polymarket-client-open/bindings@0.1.0-beta.15
 
 ## 0.1.0-beta.16
 
@@ -544,7 +544,7 @@
 
 - b982460: Add `RESOLVED_PARTIAL` to `ComboPositionStatus`. The data API emits this terminal status for combo positions that fully resolve at a fractional on-chain payout (e.g. a voided/50-50 leg). Without it, the zod schema rejected the response and combo-positions parsing failed.
 - Updated dependencies [b982460]
-  - @polymarket/bindings@0.1.0-beta.14
+  - @polymarket-client-open/bindings@0.1.0-beta.14
 
 ## 0.1.0-beta.15
 
@@ -552,7 +552,7 @@
 
 - 7649a5e: Parse Combo lifecycle activity from the canonical API `type` field instead of the legacy `side` verb.
 - Updated dependencies [7649a5e]
-  - @polymarket/bindings@0.1.0-beta.13
+  - @polymarket-client-open/bindings@0.1.0-beta.13
 
 ## 0.1.0-beta.14
 
@@ -562,7 +562,7 @@
 - b2e487f: Normalize Combo data field names to use wallet, amount, and payout consistently with the existing activity and portfolio surfaces, and brand Combo activity row IDs.
 - Updated dependencies [9233e69]
 - Updated dependencies [b2e487f]
-  - @polymarket/bindings@0.1.0-beta.12
+  - @polymarket-client-open/bindings@0.1.0-beta.12
 
 ## 0.1.0-beta.13
 
@@ -582,7 +582,7 @@
 - c056ec6: Wait for gasless relayer transactions to reach confirmed state before resolving transaction handles.
 - Updated dependencies [d731b5b]
 - Updated dependencies [cf34be0]
-  - @polymarket/bindings@0.1.0-beta.11
+  - @polymarket-client-open/bindings@0.1.0-beta.11
 
 ## 0.1.0-beta.12
 
@@ -593,7 +593,7 @@
 - a282c35: Add Perps TP/SL order metadata, lifecycle events, unified `placeOrder` TP/SL placement, and `placePositionTpSl` with position-side inference. Remove unsupported Perps margin updates and return the leverage update result.
 - Updated dependencies [4c7ac45]
 - Updated dependencies [a282c35]
-  - @polymarket/bindings@0.1.0-beta.10
+  - @polymarket-client-open/bindings@0.1.0-beta.10
 
 ## 0.1.0-beta.11
 
@@ -607,7 +607,7 @@
 - Updated dependencies [6082a3e]
 - Updated dependencies [d28b989]
 - Updated dependencies [91c9e63]
-  - @polymarket/bindings@0.1.0-beta.9
+  - @polymarket-client-open/bindings@0.1.0-beta.9
 
 ## 0.1.0-beta.10
 
@@ -621,8 +621,8 @@
 
 - 638bcc9: Default new Perps sessions to a one-week credential expiry when no custom `expiresIn` is provided.
 - d230d3a: Preserve `groupItemTitle` on normalized market responses.
-- 700acc9: Publish `expectPrivateKey` from `@polymarket/types` and republish the client against the corrected types package.
-- e8c3230: Export `PriceHistoryInterval` from `@polymarket/client`.
+- 700acc9: Publish `expectPrivateKey` from `@polymarket-client-open/types` and republish the client against the corrected types package.
+- e8c3230: Export `PriceHistoryInterval` from `@polymarket-client-open/client`.
 - 81114f9: Normalize Perps trading commands to match the rest of the SDK: place and modify orders now use `OrderSide`, place, modify, and cancel return per-item acknowledgement unions, and leverage and margin updates return `void` while throwing `RequestRejectedError` when rejected. Clean up the `PerpsInstrument` type, including a typed `PerpsFundingInterval` string format.
 - 0f8cb2b: Fix Perps session command signing to match backend MessagePack hashes and surface top-level WebSocket error acknowledgements as request rejections.
 - 1f27825: Remove Perps modify order methods from the session API, rename Perps cancel order return types from acknowledgements to results, and stop exporting raw response schema names from Perps and CLOB bindings.
@@ -636,8 +636,8 @@
 - Updated dependencies [1f27825]
 - Updated dependencies [e2ce4f9]
 - Updated dependencies [7f7eefe]
-  - @polymarket/bindings@0.1.0-beta.8
-  - @polymarket/types@0.1.0-beta.4
+  - @polymarket-client-open/bindings@0.1.0-beta.8
+  - @polymarket-client-open/types@0.1.0-beta.4
 
 ## 0.1.0-beta.8
 
@@ -652,7 +652,7 @@
 - Updated dependencies [7c76b5a]
 - Updated dependencies [330af57]
 - Updated dependencies [b20773a]
-  - @polymarket/bindings@0.1.0-beta.7
+  - @polymarket-client-open/bindings@0.1.0-beta.7
 
 ## 0.1.0-beta.7
 
@@ -676,7 +676,7 @@
 - Updated dependencies [1903b61]
 - Updated dependencies [90e76a4]
 - Updated dependencies [feead94]
-  - @polymarket/bindings@0.1.0-beta.6
+  - @polymarket-client-open/bindings@0.1.0-beta.6
 
 ## 0.1.0-beta.6
 
@@ -692,7 +692,7 @@
 - c6e0285: Parse RFQ quote rejections that use the `SUBMISSION_WINDOW_CLOSED` gateway error code.
 - Updated dependencies [84335f8]
 - Updated dependencies [c6e0285]
-  - @polymarket/bindings@0.1.0-beta.5
+  - @polymarket-client-open/bindings@0.1.0-beta.5
 
 ## 0.1.0-beta.4
 
@@ -703,7 +703,7 @@
 - 9a1f0e5: Reject whitespace-only search queries and trim leading or trailing search input.
 - Updated dependencies [02ad8fa]
 - Updated dependencies [0809105]
-  - @polymarket/bindings@0.1.0-beta.4
+  - @polymarket-client-open/bindings@0.1.0-beta.4
 
 ## 0.1.0-beta.3
 
@@ -740,8 +740,8 @@
 - Updated dependencies [0dc6339]
 - Updated dependencies [e1e5808]
 - Updated dependencies [d045298]
-  - @polymarket/bindings@0.1.0-beta.3
-  - @polymarket/types@0.1.0-beta.3
+  - @polymarket-client-open/bindings@0.1.0-beta.3
+  - @polymarket-client-open/types@0.1.0-beta.3
 
 ## 0.1.0-beta.2
 
@@ -749,8 +749,8 @@
 
 - 3a8d59a: chore: configure packages for public beta release.
 - Updated dependencies [3a8d59a]
-  - @polymarket/bindings@0.1.0-beta.2
-  - @polymarket/types@0.1.0-beta.2
+  - @polymarket-client-open/bindings@0.1.0-beta.2
+  - @polymarket-client-open/types@0.1.0-beta.2
 
 ## 0.1.0-beta.1
 
@@ -758,8 +758,8 @@
 
 - d144ca9: chore: empty changeset to test new release workflow
 - Updated dependencies [d144ca9]
-  - @polymarket/bindings@0.1.0-beta.1
-  - @polymarket/types@0.1.0-beta.1
+  - @polymarket-client-open/bindings@0.1.0-beta.1
+  - @polymarket-client-open/types@0.1.0-beta.1
 
 ## 0.1.0-beta.0
 
@@ -770,5 +770,5 @@
 ### Patch Changes
 
 - Updated dependencies [15597df]
-  - @polymarket/bindings@0.1.0-beta.0
-  - @polymarket/types@0.1.0-beta.0
+  - @polymarket-client-open/bindings@0.1.0-beta.0
+  - @polymarket-client-open/types@0.1.0-beta.0

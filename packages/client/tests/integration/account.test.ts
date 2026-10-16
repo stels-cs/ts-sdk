@@ -1,6 +1,6 @@
-import { AssetType } from '@polymarket/bindings/clob';
-import type { SecureClient } from '@polymarket/client';
-import { fetchBalanceAllowance } from '@polymarket/client/actions';
+import { AssetType } from '@polymarket-client-open/bindings/clob';
+import type { SecureClient } from '@polymarket-client-open/client';
+import { fetchBalanceAllowance } from '@polymarket-client-open/client/actions';
 import { describe, expect, it } from './fixtures';
 
 describe('Account', () => {
