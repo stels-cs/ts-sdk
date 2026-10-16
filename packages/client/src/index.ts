@@ -70,4 +70,10 @@ export type {
   RateLimitUpdateListener,
 } from './rate-limit';
 export * from './types';
-export { type AccountIdentity, SignerType } from './wallet';
+export {
+  type AccountIdentity,
+  deriveBeaconDepositWalletAddress,
+  deriveUupsDepositWalletAddress,
+  resolveAccountIdentity,
+  SignerType,
+} from './wallet';

@@ -41,7 +41,6 @@ const BYTES32_ZERO =
 const SESSION_SIGNER_MAGIC_BYTES =
   '0x6492649264926492649264926492649264926492649264926492649264926492' satisfies HexString;
 
-/** @internal */
 export function resolveAccountIdentity(
   environment: EnvironmentConfig,
   signer: EvmAddress,
@@ -162,7 +161,6 @@ const ERC1967_CONST2 =
   '0x5155f3363d3d373d3d363d7f360894a13ba1a3210667c828492db98dca3e2076';
 const ERC1967_PREFIX = 0x61003d3d8160233d3973n;
 
-/** @internal */
 export function deriveUupsDepositWalletAddress(
   signer: EvmAddress,
   config: WalletDerivationConfig,
@@ -194,7 +192,6 @@ const ERC1967_BEACON_CONST3 =
 const ERC1967_BEACON_PREFIX = 0x6100523d8160233d3973n;
 const FACTORY_BEACON_SELECTOR: HexString = '0x49493a4d';
 
-/** @internal */
 export function deriveBeaconDepositWalletAddress(
   signer: EvmAddress,
   config: WalletDerivationConfig,

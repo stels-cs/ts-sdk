@@ -425,9 +425,8 @@ class BasePublicClient<
    * This is a low-level method for building wallet-interactive workflows. Most
    * applications should use {@link createSecureClient} instead.
    *
-   * @internal
    */
-  beginAuthentication(
+  public beginAuthentication(
     request: BeginAuthenticationRequest,
     signer: Signer,
   ): Promise<
@@ -450,7 +449,7 @@ class BasePublicClient<
         );
 
         if (params.credentials !== undefined) {
-          const client = this.#createSecureClient(
+          const client = this.createSecureClient(
             params.credentials,
             identity,
             signer,
@@ -487,12 +486,12 @@ class BasePublicClient<
           timestamp,
         });
 
-        return this.#createSecureClient(credentials, identity, signer);
+        return this.createSecureClient(credentials, identity, signer);
       }.call(this as unknown as PublicClient<TPublicActions, TSecureActions>),
     );
   }
 
-  #createSecureClient(
+  public createSecureClient(
     credentials: ApiKeyCreds,
     account: AccountIdentity,
     signer: Signer,

@@ -1,10 +1,10 @@
 {
-  "name": "@polymarket/client",
-  "version": "0.13.0",
+  "name": "polymarket-client-open",
+  "version": "0.0.2",
   "description": "The Polymarket TypeScript client",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Polymarket/ts-sdk",
+    "url": "https://github.com/tels-cs/ts-sdk",
     "directory": "packages/client"
   },
   "type": "module",
