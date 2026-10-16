@@ -1,5 +1,5 @@
 {
-  "name": "@polymarket/types",
+  "name": "@polymarket-client-open/types",
   "version": "0.2.0",
   "description": "Shared TypeScript types for the Polymarket SDK.",
   "repository": {
