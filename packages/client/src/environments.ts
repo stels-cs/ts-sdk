@@ -70,6 +70,8 @@ export type EnvironmentConfig = {
   /** @internal */
   contracts: EnvironmentContracts;
   /** @internal */
+  predictions: RestEndpoint;
+  /** @internal */
   clob: ClobEndpoints;
   /** @internal */
   relayer: RestEndpoint;
@@ -101,6 +103,7 @@ export type EnvironmentConfigFork = {
   rpc?: string;
   walletDerivation?: Partial<WalletDerivationConfig>;
   contracts?: Partial<EnvironmentContracts>;
+  predictions?: Partial<RestEndpoint>;
   clob?: Partial<RestEndpoint> & {
     market?: Partial<WebSocketEndpoint>;
     user?: Partial<WebSocketEndpoint>;
@@ -197,6 +200,7 @@ export const production: EnvironmentConfig = {
       '0xDCa4af75705dbB50f62437045afF9921947917d2',
     ),
   },
+  predictions: { rest: 'https://api.defi.polymarket.com' },
   clob: {
     rest: 'https://clob.polymarket.com',
     market: { ws: 'wss://ws-subscriptions-clob.polymarket.com/ws/market' },
@@ -252,6 +256,7 @@ export function forkEnvironmentConfig(
       market: forkWebSocketEndpoint(base.clob.market, fork.clob?.market),
       user: forkWebSocketEndpoint(base.clob.user, fork.clob?.user),
     },
+    predictions: forkRestEndpoint(base.predictions, fork.predictions),
     relayer: forkRestEndpoint(base.relayer, fork.relayer),
     gamma: forkRestEndpoint(base.gamma, fork.gamma),
     data: forkRestEndpoint(base.data, fork.data),
@@ -316,6 +321,7 @@ function forkHeaders(
 /** @internal */
 export const preproduction = forkEnvironmentConfig({
   name: 'preproduction',
+  predictions: { rest: 'https://api-defi-staging.polymarket.dev' },
   clob: { rest: 'https://clob-preprod-int-v2.polymarket.com' },
   data: { rest: 'https://data-api-preprod-int.polymarket.com' },
   gamma: { rest: 'https://gamma-api-preprod-int.polymarket.com' },

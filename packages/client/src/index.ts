@@ -1,3 +1,5 @@
+import type { ServiceClient as ServiceClientInstance } from './ServiceClient';
+
 export type * from '@polymarket-client-open/bindings';
 export {
   CommentParentEntityType,
@@ -10,13 +12,18 @@ export {
   NotificationType,
   OrderPostStatus,
   OrderResponseErrorCode,
+  RewardMarketSort,
   SignatureType,
 } from '@polymarket-client-open/bindings/clob';
 export type * from '@polymarket-client-open/bindings/data';
-export { ActivityType } from '@polymarket-client-open/bindings/data';
+export {
+  ActivityType,
+  TokenModule,
+} from '@polymarket-client-open/bindings/data';
 export type * from '@polymarket-client-open/bindings/gamma';
 export {
   ComboKnownStatus,
+  MarketResolutionStatus,
   ProtocolVersion,
   TeamOrdering,
   WalletType,
@@ -33,6 +40,7 @@ export {
   PerpsKnownCancelOrderErrorCode,
   PerpsKnownInternalTransferType,
   PerpsKnownWithdrawalStatus,
+  PerpsLiquidationMethod,
   PerpsLiquidityRole,
   PerpsMarginType,
   PerpsNotificationOrderType,
@@ -46,7 +54,7 @@ export {
 } from '@polymarket-client-open/bindings/perps';
 export type * from '@polymarket-client-open/bindings/relayer';
 export * from './abis';
-export { SearchSort, isWalletDeployed } from './actions';
+export { isWalletDeployed, SearchSort } from './actions';
 export type {
   RelayerApiKeyConfig,
   RemoteBuilderSigningConfig,
@@ -69,6 +77,30 @@ export type {
   RateLimitUpdate,
   RateLimitUpdateListener,
 } from './rate-limit';
+/** @experimental This API may change in a breaking way in any release, including patch releases. */
+export type { Fetch, RequestOptions } from './request-options';
+/**
+ * Service client returned by the experimental `predictions` getter.
+ *
+ * @experimental For the polymarket.com UI. External consumers should not adopt this API. Breaking changes may occur in any release, including patch releases.
+ */
+export type ServiceClient = ServiceClientInstance;
+export { deployDepositWallet } from './actions/gasless';
+/** @experimental See {@link ServiceClient}. */
+export type {
+  ServiceClientDeleteOptions,
+  ServiceClientGetOptions,
+  ServiceClientJsonResponseOptions,
+  ServiceClientNonJsonResponseOptions,
+  ServiceClientNonJsonResponseType,
+  ServiceClientPatchOptions,
+  ServiceClientPostOptions,
+  ServiceClientRequestOptions,
+  ServiceClientResponse,
+  ServiceClientResponseOptions,
+  ServiceClientResponseType,
+} from './ServiceClient';
+export { ServiceClientRequestError } from './ServiceClient';
 export * from './types';
 export {
   type AccountIdentity,
@@ -77,6 +109,3 @@ export {
   resolveAccountIdentity,
   SignerType,
 } from './wallet';
-export {
-  deployDepositWallet
-} from './actions/gasless'

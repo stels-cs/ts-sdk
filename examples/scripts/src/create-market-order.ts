@@ -1,4 +1,8 @@
-import { createSecureClient, OrderSide, OrderType } from '@polymarket-client-open/client';
+import {
+  createSecureClient,
+  OrderSide,
+  OrderType,
+} from '@polymarket-client-open/client';
 import { privateKey } from '@polymarket-client-open/client/viem';
 import { never } from './lib/assert';
 import { requireEnv } from './lib/env';

@@ -10,7 +10,6 @@ import {
   type PerpsBuilderEarningsSummary,
   PerpsBuilderEarningsSummarySchema,
 } from '@polymarket-client-open/bindings/perps';
-import { unwrap } from '@polymarket-client-open/types';
 import { z } from 'zod';
 import { snakeCase, toSearchParams } from '../../../actions/params';
 import {
@@ -23,7 +22,6 @@ import {
 } from '../../../errors';
 import { parseUserInput } from '../../../input';
 import { type Page, type Paginated, paginate } from '../../../pagination';
-import { validateWith } from '../../../response';
 import type { ServiceClient } from '../../../ServiceClient';
 
 const FetchPerpsBuilderApprovalsRequestSchema = z
@@ -75,13 +73,10 @@ export async function fetchPerpsBuilderApprovals(
     request,
     FetchPerpsBuilderApprovalsRequestSchema,
   );
-  const response = await unwrap(
-    api
-      .get('/v1/account/builder-approvals', {
-        params: toSearchParams(params, snakeCase()),
-      })
-      .andThen(validateWith(FetchPerpsBuilderApprovalsResponseSchema)),
-  );
+  const response = await api.get('/v1/account/builder-approvals', {
+    schema: FetchPerpsBuilderApprovalsResponseSchema,
+    params: toSearchParams(params, snakeCase()),
+  });
   return response.data;
 }
 
@@ -167,6 +162,7 @@ export function listPerpsBuilderEarnings(
   return paginate((cursor) =>
     api
       .get('/v1/account/builder-earnings', {
+        schema: ListPerpsBuilderEarningsResponseSchema,
         params:
           cursor === undefined
             ? toSearchParams(params, {
@@ -176,8 +172,7 @@ export function listPerpsBuilderEarnings(
               })
             : new URLSearchParams({ cursor }),
       })
-      .andThen(validateWith(ListPerpsBuilderEarningsResponseSchema))
-      .map((response): Page<PerpsBuilderEarning[]> => {
+      .then((response): Page<PerpsBuilderEarning[]> => {
         if (!response.more) {
           return { items: response.data, hasMore: false };
         }
@@ -248,15 +243,12 @@ export async function fetchPerpsBuilderEarningsSummary(
   request?: FetchPerpsBuilderEarningsSummaryRequest,
 ): Promise<PerpsBuilderEarningsSummary> {
   const params = parseUserInput(request, BuilderReportingRequestSchema);
-  return unwrap(
-    api
-      .get('/v1/account/builder-earnings-summary', {
-        params: toSearchParams(params, {
-          start: 'start_timestamp',
-          end: 'end_timestamp',
-          asOfSequence: 'as_of_sequence',
-        }),
-      })
-      .andThen(validateWith(PerpsBuilderEarningsSummarySchema)),
-  );
+  return api.get('/v1/account/builder-earnings-summary', {
+    schema: PerpsBuilderEarningsSummarySchema,
+    params: toSearchParams(params, {
+      start: 'start_timestamp',
+      end: 'end_timestamp',
+      asOfSequence: 'as_of_sequence',
+    }),
+  });
 }

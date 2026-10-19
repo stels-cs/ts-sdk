@@ -1,4 +1,7 @@
-import { createSecureClient, PriceProvider } from '@polymarket-client-open/client';
+import {
+  createSecureClient,
+  PriceProvider,
+} from '@polymarket-client-open/client';
 import { privateKey } from '@polymarket-client-open/client/viem';
 import { requireEnv } from './lib/env';
 

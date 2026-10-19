@@ -970,6 +970,7 @@ describe('PerpsSession', () => {
                   JSON.stringify({
                     ch: 'builderFills',
                     ts: 1_700_000_000_000,
+                    ets: 1_699_999_999_000,
                     sq: sequence,
                     data: [],
                   }),
@@ -1261,6 +1262,7 @@ describe('PerpsSession', () => {
         const serverResync = waitForNextEvent(session);
         await connection.send({
           ch: 'notifications',
+          ets: 1_699_999_999_000,
           sq: 1050,
           ts: 1_700_000_000_000,
           type: 'resync',
@@ -2512,6 +2514,7 @@ describe('PerpsSession', () => {
         await connection.send({
           ch: 'tpsl::1',
           data: { oid: 123, st: status },
+          ets: 1_699_999_999_000,
           sq: index + 1,
           ts: 1_700_000_000_000,
         });
@@ -2540,12 +2543,14 @@ describe('PerpsSession', () => {
       await connection.send({
         ch: 'tpsl::1',
         data: { oid: 123, st: 'future_status' },
+        ets: 1_699_999_999_000,
         sq: 1,
         ts: 1_700_000_000_000,
       });
       await connection.send({
         ch: 'tpsl::1',
         data: { oid: 123, st: 'armed' },
+        ets: 1_699_999_999_000,
         sq: 2,
         ts: 1_700_000_000_000,
       });
@@ -2576,6 +2581,7 @@ describe('PerpsSession', () => {
       const nextEvent = waitForNextEvent(session);
       await connection.send({
         ch: 'notifications',
+        ets: 1_699_999_999_000,
         sq: 1042,
         ts: 1_767_225_600_000,
         data: {
@@ -2646,7 +2652,9 @@ describe('PerpsSession', () => {
       await session.close();
     });
 
-    it('emits server resyncs and continues notifications without synthetic gaps', async () => {
+    it.each([
+      0, 1_699_999_999_000,
+    ])('emits server resync horizon %s and continues notifications without synthetic gaps', async (horizon) => {
       mockSuccessfulSession();
       const connection = captureConnection(server, perps);
       const session = createSession();
@@ -2656,7 +2664,7 @@ describe('PerpsSession', () => {
       const nextEvent = waitForNextEvent(session);
       await connection.send({
         ch: 'notifications',
-        ets: 1_699_999_999_000,
+        ets: horizon,
         sq: 1050,
         ts: 1_700_000_000_000,
         type: 'resync',
@@ -2666,6 +2674,7 @@ describe('PerpsSession', () => {
         value: {
           channel: 'notifications',
           reason: 'server',
+          eventTimestamp: horizon === 0 ? null : horizon,
           sequence: 1050,
           timestamp: 1_700_000_000_000,
           type: 'resync',
@@ -2741,6 +2750,7 @@ describe('PerpsSession', () => {
         unknownFrame: {
           ch: 'notifications',
           data: { id: NOTIFICATION_ID, type: 'future_notification' },
+          ets: 1_699_999_999_000,
           sq: 1,
           ts: 1_700_000_000_000,
         },
@@ -3031,7 +3041,11 @@ describe('PerpsSession', () => {
       });
     });
 
-    it('pages fills with the native cursor while keeping the requested filters', async () => {
+    it.each([
+      undefined,
+      0,
+      4_294_967_295,
+    ])('pages fills with instrument %s while keeping the requested filters', async (instrumentId) => {
       const requests: URLSearchParams[] = [];
       server.use(
         http.get(`${production.perps.rest}/v1/account/fills`, ({ request }) => {
@@ -3054,16 +3068,36 @@ describe('PerpsSession', () => {
       const session = createSession();
 
       const pages: number[][] = [];
-      for await (const page of session.listFills({ end: 3000, start: 0 })) {
+      for await (const page of session.listFills({
+        instrumentId,
+        end: 3000,
+        start: 0,
+      })) {
         pages.push(page.items.map((fill) => fill.tradeId));
         if (pages.length > MAX_EXPECTED_PAGES) break;
       }
 
       expect(pages).toEqual([[3, 2], [1]]);
+      const filter =
+        instrumentId === undefined ? '' : `&instrument_id=${instrumentId}`;
       expect(requests.map((params) => params.toString())).toEqual([
-        'start_timestamp=0&end_timestamp=3000',
-        'start_timestamp=0&end_timestamp=3000&cursor=2',
+        `start_timestamp=0&end_timestamp=3000${filter}`,
+        `start_timestamp=0&end_timestamp=3000${filter}&cursor=2`,
       ]);
+    });
+
+    it.each([
+      -1,
+      4_294_967_296,
+      1.5,
+      Number.NaN,
+      true,
+      '1',
+    ])('rejects invalid fill instrument %s before requests', (instrumentId) => {
+      const session = createSession();
+      expect(() =>
+        session.listFills({ instrumentId: instrumentId as number }),
+      ).toThrow(UserInputError);
     });
 
     it('forwards a sort direction and a caller-provided fills cursor as-is', async () => {
@@ -3084,6 +3118,7 @@ describe('PerpsSession', () => {
         .listFills({
           cursor: toPaginationCursor('42'),
           sort: PerpsSortDirection.Ascending,
+          instrumentId: 4_294_967_295,
         })
         .firstPage();
 
@@ -3091,7 +3126,7 @@ describe('PerpsSession', () => {
       expect(first.hasMore).toBe(false);
       expect(first.nextCursor).toBeUndefined();
       expect(requests.map((params) => params.toString())).toEqual([
-        'sort=asc&cursor=42',
+        'instrument_id=4294967295&sort=asc&cursor=42',
       ]);
     });
 
@@ -3587,6 +3622,7 @@ function balanceUpdate(request: { balance: string; sequence: number }) {
       balance: request.balance,
       value: request.balance,
     },
+    ets: 1_699_999_999_000,
     sq: request.sequence,
     ts: 1_700_000_000_000,
   };
@@ -3601,6 +3637,7 @@ function fillsUpdate(request: { sequence: number; tradeIds: number[] }) {
       fee: '1.25',
       iid: 1,
       liq: false,
+      adl: false,
       oid: 123,
       p: '100.00',
       pep: '100.00',
@@ -3612,6 +3649,7 @@ function fillsUpdate(request: { sequence: number; tradeIds: number[] }) {
       tid,
       ts: 1_700_000_000_000,
     })),
+    ets: 1_699_999_999_000,
     sq: request.sequence,
     ts: 1_700_000_000_000,
   };
@@ -3629,6 +3667,7 @@ function fundingUpdate(request: { id: number }) {
       sz: '10.00',
       ts: 1_700_000_000_000,
     },
+    ets: 1_699_999_999_000,
     sq: 1,
     ts: 1_700_000_000_000,
   };
@@ -3653,6 +3692,7 @@ function orderUpdate(status: string, clientOrderId: string) {
       tif: 'gtc',
       uts: 1_700_000_000_000,
     },
+    ets: 1_699_999_999_000,
     sq: 1,
     ts: 1_700_000_000_000,
   };
@@ -3673,6 +3713,7 @@ function notificationUpdate(request: { sequence: number; type: string }) {
       size: '10.00',
       type: request.type,
     },
+    ets: 1_699_999_999_000,
     sq: request.sequence,
     ts: 1_700_000_000_000,
   };
@@ -3701,6 +3742,7 @@ function accountFill(tradeId: number, timestamp: number) {
     hash: `0x${'1'.repeat(64)}`,
     instrument_id: 1,
     liquidation: false,
+    adl: false,
     order_id: 100 + tradeId,
     pnl: '0',
     previous_entry_price: '0',
@@ -3750,6 +3792,7 @@ function mockPortfolioPosition(request: { size: string }) {
         {
           cross: false,
           cumulative_funding: '0',
+          adl_index: 0,
           entry_price: '100',
           initial_margin: '30',
           instrument_id: 1,
@@ -3765,12 +3808,14 @@ function mockPortfolioPosition(request: { size: string }) {
       ],
       margin: {
         total_account_value: '1000',
+        available_order_margin: '970',
         total_initial_margin: '30',
         total_maintenance_margin: '10',
         total_position_value: '150',
       },
       withdrawable: '970',
       in_liquidation: false,
+      fee_tier: 0,
       timestamp: 1_700_000_000_000,
     }),
   );
